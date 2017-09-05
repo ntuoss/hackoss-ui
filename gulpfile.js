@@ -42,7 +42,7 @@ gulp.task('minify', function() {
 
 // Watch Files For Changes
 gulp.task('watch', ['browserSync', 'sass', 'lint', 'minify'], function() {
-    gulp.watch('*.html', [browserSync.reload]);
+    gulp.watch('*.html', browserSync.reload);
     gulp.watch('css/scss/**/*.scss', ['sass', browserSync.reload]);
     gulp.watch('js/*.js', ['lint', 'minify', browserSync.reload]);
 });
