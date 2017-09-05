@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.min.css">
+    <link rel="icon" href="favicon.ico">
+    <title>NTU Open Source Society</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="home-jumbotron">
+        <div class="row justify-content-center align-items-center" id="home-jumbotron-logo-row">
+            <div class="col-8 col-lg-5">
+                <img src="assets/logo/Logo_Colour_Full_Bottom.png" class="img-fluid" />
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center" id="home-jumbotron-arrow-row">
+            <div class="col-lg-6 text-center">
+                <a href="#home-section-about" class="page-scroll" id="home-jumbotron-arrow"><i class="fa fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container home-section" id="home-section-about">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-4">
+                <button class="btn btn-lg btn-ntuoss-green btn-block">Find Out More <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container home-section" id="home-section-events">
+        <div class="card-deck"></div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-4">
+                <button class="btn btn-lg btn-ntuoss-blue btn-block">More Events <i class="fa fa-long-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6">
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Sign up for our mailing list">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button">Sign Up</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center" id="footer-social-buttons">
+            <div class="col-12 col-md-6">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <a href="https://www.facebook.com/ntuoss" target="_blank">
+                                <button class="btn btn-info social-button facebook"><i class="fa fa-facebook fa-1x"></i></button>
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="https://twitter.com/ntuoss" target="_blank">
+                                <button class="btn btn-info social-button twitter"><i class="fa fa-twitter fa-1x"></i></button>
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="https://github.com/ntuoss" target="_blank">
+                                <button class="btn btn-info social-button github"><i class="fa fa-github fa-1x"></i></button>
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="mailto:ntuoss@gmail.com">
+                                <button class="btn btn-info social-button email"><i class="fa fa-envelope fa-1x"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="templates" hidden>
+        <div id="event-card-template" class="card">
+            <img class="card-img-top" src="">
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+            </div>
+            <div class="card-footer bg-transparent text-center">
+                <a href="" class="btn btn-outline-primary">Facebook Event</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/jquery.easing/jquery.easing.min.js"></script>
+    <script src="js/min/main.min.js"></script>
+    <script src="js/fb.js"></script>
+</body>
+
+</html>

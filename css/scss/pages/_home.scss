@@ -1,0 +1,27 @@
+#home-jumbotron {
+    background-color: #FCFDFF;
+}
+
+#home-jumbotron-logo-row {
+    height: 90vh;
+}
+
+#home-jumbotron-arrow-row {
+    height: 10vh;
+
+    #home-jumbotron-arrow {
+        font-size: 2rem;
+        color: #000;
+    }
+}
+
+.home-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#home-section-events {
+    .card-deck {
+        margin-bottom: 30px;
+    }
+}
