@@ -37,7 +37,7 @@ function populateHomeCards() {
     });
     
     getEventsPromise.catch(() => {
-        console.log('Something went wrong in fetching event data.');
+        console.error('Something went wrong in fetching event data.');
     });
 }
 
@@ -46,7 +46,6 @@ function getEvents() {
         FB.api(
             '219467331408976/events', { fields: 'id, name, description, start_time, end_time, cover', access_token: '102814740426818|Yb7Io6_Ze8Ql3EjVcsNabKyLTWo' },
             function(response) {
-                console.log(response);
                 if (!response.error) {
                     resolve(response);
                 } else {
