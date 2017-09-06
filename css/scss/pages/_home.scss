@@ -3,7 +3,18 @@
 }
 
 #home-jumbotron-logo-row {
-    height: 90vh;
+    height: 70vh;
+}
+
+#home-jumbotron-slogan-row {
+    height: 20vh;
+
+    h1 {
+        font-family: 'Industry';
+        font-weight: 700;
+        border: 8px solid black;
+        padding: 15px;
+    }
 }
 
 #home-jumbotron-arrow-row {
