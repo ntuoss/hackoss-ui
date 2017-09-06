@@ -34,8 +34,7 @@ gulp.task('lint', function() {
 gulp.task('minify', function() {
     return gulp.src('js/*.js')
         .pipe(babel({ presets: ['es2015'] }))
-        .pipe(uglify())
-        .on('error', function(err) { console.log(err.toString()); })
+        .pipe(uglify().on('error', function(err) { console.log(err.toString()); }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('js/min'));
 });
