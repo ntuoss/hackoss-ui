@@ -1,5 +1,19 @@
 #home-jumbotron {
-    background-color: $background-grey;
+    background-color: $ntuoss-blue;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+}
+#home-jumbotron:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0, 0.4) 90%);
+  width: 100%;
+  height: 8em;
 }
 
 #home-jumbotron-logo-row {
@@ -11,15 +25,16 @@
 
     h1 {
         font-family: 'Industry';
-        font-weight: 700;
-        border: 5px solid black;
+        // font-weight: 700;
+        // border: 5px solid black;
         padding: 15px;
-        margin-bottom: 0;
+        margin-top:5%;
     }
 }
 
 #home-jumbotron-arrow-row {
     height: 10vh;
+    // padding-bottom:40px;
 
     #home-jumbotron-arrow {
         font-size: 2rem;
@@ -28,10 +43,35 @@
 }
 
 .home-section {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
+.navbar{
+  // background-color: transparent;
+  transition: background-color 300ms linear;
 
+  font-family: 'Industry', sans-serif;
+}
+.nav-link{
+  margin-left: 5px;
+  margin-bottom:5px;
+  margin-top: 0px;
+  font-size: 1em;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: rgba(255,255,255,0.5);
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: white;
+  transition: color 100ms linear;
+
+}
+.navbar-light .navbar-nav .active>.nav-link{
+  color: white;
+}
+.btn-block{
+  margin-top:20px;
+}
 #home-section-events {
     .card-deck {
         margin-bottom: 30px;
@@ -39,5 +79,8 @@
 
     .card {
         margin-bottom: 10px;
+        // border-bottom-left-radius: 20px;
+        // border-bottom-right-radius: 20px;
+        // Experimental, I had nothing to do with this
     }
 }
