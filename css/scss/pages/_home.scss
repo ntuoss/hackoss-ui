@@ -25,7 +25,7 @@ p{
 
     h1 {
         font-family: 'Industry';
-        // font-weight: 700;
+        font-weight: 400;
         // border: 5px solid black;
         padding: 15px;
         margin-top:5%;
@@ -47,9 +47,7 @@ p{
     margin-bottom: 100px;
 }
 .navbar{
-  // background-color: transparent;
   transition: background-color 300ms linear;
-
   font-family: 'Industry', sans-serif;
 }
 .nav-link{
