@@ -10,7 +10,7 @@
 
     <link rel="icon" href="favicon.ico">
 
-    <title>NTU Open Source Society • Events</title>
+    <title>NTU Open Source Society • About Us</title>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/min/lil-nav.min.js"></script>
 </head>
@@ -30,10 +30,10 @@
         <li class="nav-item">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active ">
+        <li class="nav-item">
           <a class="nav-link" href="/events.html">Our Events</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active ">
           <a class="nav-link" href="/aboutus.html">About Us</a>
         </li>
       </ul>
@@ -41,20 +41,95 @@
     </div>
   </nav>
     <div class="jumbotron">
-        <h1 class="display-3 text-center">Our Events</h1>
+        <h1 class="display-3 text-center">About Us</h1>
     </div>
 
-    <div class="container section" id="events-section"></div>
+    <div class="container section">
 
-    <div class="container section" id="loading-section">
         <div class="row justify-content-center">
-            <div class="col-3 text-center">
-                <i class="fa fa-spinner fa-spin fa-3x"></i>
+          <div class="col-md-12">
+            <h1 class="display-4 text-center main-heading"> Who We are </h1>
+          </div>
+          <div class="col-md-12">
+            <p class="main-body text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <h1 class="display-4 text-center main-heading"> Our Team </h1>
+          </div>
+          <div class="col-md-8">
+            <div class="card-deck">
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/200x200">
+                <div class="card-block">
+                  <h4 class="card-title">Name</h4>
+                  <small class="card-text text-muted">President | SCSE '18</small>
+                </div>
+              </div>
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/200x200">
+                <div class="card-block">
+                  <h4 class="card-title">Name</h4>
+                  <small class="card-text text-muted">Vice President | SCSE '18</small>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card-deck">
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/235x180">
+                <div class="card-block">
+                  <h4 class="card-title">Name 1</h4>
+                  <small class="card-text text-muted">Tech Director | SBS '21</small>
+                </div>
+              </div>
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/235x180">
+                <div class="card-block">
+                  <h4 class="card-title">Name 2</h4>
+                  <small class="card-text text-muted">Tech Director | SBS '21</small>
+                </div>
+              </div>
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/235x180">
+                <div class="card-block">
+                  <h4 class="card-title">Name 3</h4>
+                  <small class="card-text text-muted">Tech Director | SBS '21</small>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card-deck">
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/235x180">
+                <div class="card-block">
+                  <h4 class="card-title">Name 1</h4>
+                  <small class="card-text text-muted">Tech Director | SBS '21</small>
+                </div>
+              </div>
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/235x180">
+                <div class="card-block">
+                  <h4 class="card-title">Name 2</h4>
+                  <small class="card-text text-muted">Tech Director | SBS '21</small>
+                </div>
+              </div>
+              <div class="card card-about">
+                <img class="my-peeps" src="http://via.placeholder.com/235x180">
+                <div class="card-block">
+                  <h4 class="card-title">Name 3</h4>
+                  <small class="card-text text-muted">Tech Director | SBS '21</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
+  </div>
 
-    <a href="#events-section" class="btn btn-outline-primary page-scroll" id="scroll-top-btn"><i class="fa fa-chevron-up"></i></a>
 
     <div class="container-fluid footer">
         <div class="row justify-content-center">
@@ -97,28 +172,10 @@
         </div>
     </div>
 
-    <div id="templates" hidden>
-        <div class="row justify-content-center" id="event-card-template">
-            <div class="col-11 col-lg-8">
-                <div class="card">
-                    <img class="card-img-top" src="">
-                    <div class="card-body">
-                        <h4 class="card-title event-name"></h4>
-                        <h6 class="card-title event-datetime"></h6>
-                        <p class="card-text event-description"></p>
-                    </div>
-                    <div class="card-footer bg-transparent text-center">
-                        <a href="" target="_blank" class="btn btn-outline-primary">Facebook Event</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/jquery.easing/jquery.easing.min.js"></script>
-    <script src="js/min/fb.min.js"></script>
     <script src="js/min/main.min.js"></script>
 </body>
 
