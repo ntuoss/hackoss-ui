@@ -1,20 +1,12 @@
 #home-jumbotron {
-    background-color: $ntuoss-blue;
+    // background-color: $ntuoss-blue;
+    background-color: #2980b9;
 }
 p{
   font-family: 'Open Sans', sans-serif;
 }
-#home-jumbotron:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0, 0.4) 90%);
-  width: 100%;
-  height: 8em;
-}
+
+
 a:hover{
   text-decoration: none;
 }
@@ -42,6 +34,25 @@ a:hover{
         font-size: 2rem;
         color: #000;
     }
+    #home-jumbotron-arrow:hover {
+        // color:white;
+        // transition: color 300ms linear
+        animation: 1.5s multicolor
+    }
+    @keyframes multicolor {
+        0% {
+            color: #000;
+        }
+        33% {
+            color: $ntuoss-blue;
+        }
+        66% {
+            color: $ntuoss-yellow;
+        }
+        100% {
+            color: $ntuoss-green;
+        }
+    }
 }
 
 .home-section {
@@ -49,7 +60,7 @@ a:hover{
     margin-bottom: 100px;
 }
 .navbar{
-  transition: background-color 300ms linear;
+  transition: background-color 300ms ease-in;
   font-family: 'Industry', sans-serif;
 }
 .nav-link{

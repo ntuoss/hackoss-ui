@@ -8,21 +8,23 @@
 }
 .card-deck{
   margin-top:2%;
+  padding:0px;
 }
 .card-about{
   border:none;
   text-align: center;
   padding:15px;
+  height:85%;
 }
 .card-title{
   margin-top:25px;
+  font-size:1.3em;
 }
 .card-text{
   font-size:1.1em;
 }
 .my-peeps{
   // border-radius: 70px
-  height:200px;
   text-align: center;
 }
 .display-3{
