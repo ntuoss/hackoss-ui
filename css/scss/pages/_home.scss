@@ -59,27 +59,53 @@ a:hover{
     margin-top: 100px;
     margin-bottom: 100px;
 }
-.navbar{
-  transition: background-color 300ms ease-in;
-  font-family: 'Industry', sans-serif;
-}
-.nav-link{
-  margin-left: 5px;
-  margin-bottom:5px;
-  margin-top: 0px;
-  font-size: 1em;
-}
-.navbar-light .navbar-nav .nav-link{
-  color: rgba(255,255,255,0.5);
-}
-.navbar-light .navbar-nav .nav-link:hover{
-  color: white;
-  transition: color 100ms linear;
+@media only screen and (min-width: 768px) {
 
+
+    .navbar{
+      transition: background-color 300ms ease-in;
+      font-family: 'Industry', sans-serif;
+    }
+    .nav-link{
+      margin-left: 5px;
+      margin-bottom:5px;
+      margin-top: 0px;
+      font-size: 1em;
+    }
+    .navbar-light .navbar-nav .nav-link{
+      color: rgba(255,255,255,0.5);
+    }
+    .navbar-light .navbar-nav .nav-link:hover{
+      color: white;
+      transition: color 100ms linear;
+
+    }
+    .navbar-light .navbar-nav .active>.nav-link{
+      color: white;
+    }
 }
-.navbar-light .navbar-nav .active>.nav-link{
-  color: white;
-}
+    .navbar{
+      transition: background-color 300ms ease-in;
+      font-family: 'Industry', sans-serif;
+    }
+    .nav-link{
+      margin-left: 5px;
+      margin-bottom:5px;
+      margin-top: 0px;
+      font-size: 1em;
+    }
+    .navbar-light .navbar-nav .nav-link{
+      color: rgba(0,0,0,0.5);
+    }
+    .navbar-light .navbar-nav .nav-link:hover{
+      color: black;
+      transition: color 100ms linear;
+
+    }
+    .navbar-light .navbar-nav .active>.nav-link{
+      color:black;
+    }
+
 .btn-block{
   margin-top:20px;
 }
