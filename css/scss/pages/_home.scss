@@ -25,6 +25,16 @@ a:hover{
         margin-top:10%;
     }
 }
+@media only screen and (max-width: 991px) {
+  #home-jumbotron-slogan-row{
+    margin-top:17%;
+  }
+  #home-jumbotron-logo-row{
+    height: 40vh;
+  }
+
+
+}
 
 #home-jumbotron-arrow-row {
     height: 10vh;
