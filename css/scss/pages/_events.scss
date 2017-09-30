@@ -1,9 +1,14 @@
-.section {
+.events-section {
     margin-bottom: 40px;
 }
 
-.card {
+#events-section-events .card {
     margin-bottom: 30px;
+
+    .event-datetime {
+        font-size: 15px;
+        color: #888;
+    }
 
     .card-img-top {
         max-height: 500px;
@@ -12,14 +17,15 @@
     }
 
     .card-text {
-        white-space: pre-wrap;
+        margin-top: 20px;
+        font-size: 1rem;
     }
 }
 
-#scroll-top-btn {
+#events-scroll-top-btn {
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 4%;
+    right: 3%;
     z-index: 99;
     border-radius: 100%;
     width: 50px;

@@ -1,33 +1,23 @@
-.main-heading {
-    margin-top: 5%;
+.about-us-section {
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    .main-body {
+        font-size: 1.1em;
+    }
 }
 
-.main-body {
-    margin: 3%;
-    font-size: 1.1em;
-}
-
-.card-deck {
-    margin-top: 2%;
-    padding: 0px;
-}
-
-.card-about {
-    border: none;
+.team-member {
     text-align: center;
     padding: 15px;
-    height: 85%;
+    margin-bottom: 20px;
 }
 
-.card-title {
+.member-name {
     margin-top: 25px;
     font-size: 1.3em;
 }
 
-.card-text {
+.member-title {
     font-size: 1.1em;
-}
-
-.my-peeps {
-    text-align: center;
 }

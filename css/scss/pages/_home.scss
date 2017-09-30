@@ -51,20 +51,16 @@
 }
 
 .home-section {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    .btn-block {
+        margin-top: 20px;
+    }
 }
 
-p {
+#home-section-about p {
     font-family: 'Open Sans', sans-serif;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-.btn-block {
-    margin-top: 20px;
 }
 
 #home-section-events {

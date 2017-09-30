@@ -22,17 +22,18 @@ window.fbAsyncInit = function() {
     } else if (window.location.pathname === '/events.html') {
         populateEventCards();
         $(window).scroll(function() {
-            if (document.body.scrollTop > 500) {
-                $('#scroll-top-btn').fadeIn();
+            if ($(window).scrollTop() > 500) {
+                console.log('here');
+                $('#events-scroll-top-btn').show();
             } else {
-                $('#scroll-top-btn').fadeOut();
+                $('#events-scroll-top-btn').hide();
             }
 
             if ($(window).scrollTop() == $(document).height() - $(window).height()) {
                 if (nextPaging !== '') {
                     populateEventCards();
                 } else {
-                    $('#loading-section').hide();
+                    $('#event-section-loading').hide();
                 }
             }
         });
@@ -69,7 +70,7 @@ function populateEventCards() {
         nextPaging = response.paging.next === undefined ? '' : response.paging.next;
 
         let data = response.data;
-        let $section = $('#events-section');
+        let $section = $('#events-section-events');
         for (const item of data) {
             let $card = $('#templates #event-card-template').clone().removeAttr('id');
 
@@ -130,7 +131,6 @@ function populateEventCards() {
 function getEvents(limit) {
     return new Promise((resolve, reject) => {
         let callback = function(response) {
-            console.log(response);
             if (!response.error) {
                 resolve(response);
             } else {
