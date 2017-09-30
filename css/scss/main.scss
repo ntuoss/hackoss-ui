@@ -2,12 +2,12 @@
 @import '../../bower_components/bootstrap/scss/_variables';
 @import '../../bower_components/bootstrap/scss/_mixins';
 
-@import '_variables';
-
-@import 'utils/_buttons';
+@import 'utils/_variables';
 @import 'utils/_fonts';
+
+@import 'components/_buttons';
+@import 'components/_footer';
 
 @import 'pages/_home';
 @import 'pages/_events';
-@import 'pages/_footer';
 @import 'pages/_about-us';
