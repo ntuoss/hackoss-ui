@@ -75,8 +75,8 @@ function populateEventCards() {
 
             $card.find('.event-name').text(item.name);
 
-            let start = new Date(item.start_time);
-            let end = new Date(item.end_time);
+            let start = parseFBDate(item.start_time);
+            let end = parseFBDate(item.end_time);
             let datetime = '';
             datetime += start.toDateString();
             datetime += ' at ';
@@ -84,6 +84,7 @@ function populateEventCards() {
             datetime += ' - ';
             datetime += start.toDateString() === end.toDateString() ? '' : ' ' + end.toDateString();
             datetime += end.toTimeString().substring(0, 5);
+            datetime += ' SGT'
             $card.find('.event-datetime').text(datetime);
 
             let maxChars = 380;
@@ -125,6 +126,15 @@ function populateEventCards() {
     getEventsPromise.catch(() => {
         console.error('Something went wrong in fetching event data.');
     });
+}
+
+function parseFBDate(datestr) {
+    let year = parseInt(datestr.substring(0, 4));
+    let month = parseInt(datestr.substring(5, 7));
+    let date = parseInt(datestr.substring(8, 10));
+    let hh = parseInt(datestr.substring(11, 13));
+    let mm = parseInt(datestr.substring(14, 16));
+    return new Date(year, month, date, hh, mm);
 }
 
 function getEvents(limit) {
