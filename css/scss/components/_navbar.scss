@@ -1,0 +1,53 @@
+.navbar {
+    font-family: 'Industry', sans-serif;
+    background: #fff;
+    border-bottom: 2px #333 solid;
+    transition: background-color 300ms ease-in;
+}
+
+.navbar .navbar-brand {
+    height: 40px;
+    width: 40px;
+    background-image: url('../assets/logo/Logo_Colour_Small.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        color: #000;
+    }
+}
+
+.navbar .navbar-nav .active>.nav-link {
+    color: #000;
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar-transparent {
+        background: transparent;
+        border-bottom: none;
+        transition: all 300ms ease-in-out;
+    }
+
+    .navbar-transparent .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.5);
+        transition: color 100ms ease-in-out;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .navbar-transparent .navbar-nav .active>.nav-link {
+        color: #fff;
+    }
+
+    .navbar-transparent .navbar-brand {
+        background-image: url('../assets/logo/Logo_Light_Small.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
