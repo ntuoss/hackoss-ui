@@ -23,7 +23,6 @@ window.fbAsyncInit = function() {
         populateEventCards();
         $(window).scroll(function() {
             if ($(window).scrollTop() > 500) {
-                console.log('here');
                 $('#events-scroll-top-btn').show();
             } else {
                 $('#events-scroll-top-btn').hide();
