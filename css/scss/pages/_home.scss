@@ -6,9 +6,9 @@
     height: 25vh;
 
     h1 {
-        font-family: 'Industry';
+        font-family: $ntuoss-headings-font-stack;
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 3em;
         padding: 15px;
         margin-top: 10%;
     }
@@ -22,7 +22,7 @@
     height: 10vh;
     
     #home-jumbotron-arrow {
-        font-size: 2rem;
+        font-size: 2em;
         color: #000;
         transition: color 0.5s ease-in-out;
     
@@ -41,7 +41,7 @@
         height: 15vh;
 
         h1 {
-            font-size: 2rem;
+            font-size: 2em;
         }
     }
 
@@ -60,7 +60,15 @@
 }
 
 #home-section-about p {
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+
+    strong {
+        font-weight: 700;
+    }
 }
 
 #home-section-events {

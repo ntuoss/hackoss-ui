@@ -2,8 +2,16 @@
     margin-top: 10px;
     margin-bottom: 50px;
 
-    .main-body {
+    p {
         font-size: 1.1em;
+        line-height: 1.5;
+        text-align: justify;
+        -moz-text-align-last: center;
+        text-align-last: center;
+
+        strong {
+            font-weight: 700;
+        }
     }
 }
 
@@ -16,6 +24,7 @@
 .member-name {
     margin-top: 25px;
     font-size: 1.3em;
+    font-weight: 600;
 }
 
 .member-title {
