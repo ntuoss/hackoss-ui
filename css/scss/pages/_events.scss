@@ -4,6 +4,7 @@
     font-weight: 400;
 }
 
+
 .section {
     margin-bottom: 40px;
 }
@@ -29,9 +30,9 @@
   transition: color 100ms linear;
 
 }
-.navbar-light .navbar-nav .active>.nav-link{
-  color: white;
-}
+// .navbar-light .navbar-nav .active>.nav-link{
+//   color: white;
+// }
 #scroll-top-btn {
     position: fixed;
     bottom: 20px;
@@ -42,4 +43,25 @@
     height: 50px;
     font-size: 1.4rem;
     display: none;
+}
+@media only screen and (max-width: 991px) {
+  .jumbotron {
+      margin-top:15%;
+  }
+  .navbar{
+    background: white;
+    border-bottom: 1px grey solid;
+  }
+  .navbar-light .navbar-nav .nav-link{
+    color: rgba(0,0,0,0.5);
+  }
+  .navbar-light .navbar-nav .active>.nav-link{
+    color: "black";
+  }
+  .navbar-collapse{
+    background: white;
+  }
+  #navbar-brand{
+    src: url("../../../assets/logo/Logo_Colour_Small.png");
+  }
 }
