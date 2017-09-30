@@ -8,19 +8,18 @@
     margin-top: 50px;
 }
 
-.mailing-list{
-  font-size:1.2em;
-  color:white;
-  a{
+.mailing-list {
+    font-size: 1.2em;
     color: white;
-    border-bottom: 1px dotted white;
-  }
-  a:hover{
-    border-bottom: 1px solid white;
-
-  }
-
+    a {
+        color: white;
+        border-bottom: 1px dotted white;
+    }
+    a:hover {
+        border-bottom: 1px solid white;
+    }
 }
+
 .footer .social-button {
     font-size: 24px;
     width: 50px;
@@ -28,7 +27,6 @@
     margin-bottom: 15px;
     border-radius: 100%;
     background-color: #fff;
-
 }
 
 
@@ -45,7 +43,7 @@
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    border-color: black ;
+    border-color: black;
     background-color: $color;
 
     i {

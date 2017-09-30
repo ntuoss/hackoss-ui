@@ -3,49 +3,42 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.min.css">
-
     <link rel="icon" href="favicon.ico">
-
     <title>NTU Open Source Society • Events</title>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/min/lil-nav.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light">
-    <a class="navbar-brand" href="/"><img src="/assets/logo/Logo_Light_Small.png" width="40" height="40" class="d-inline-block align-top" alt="" id="nav-logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-    <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <!-- Gotta maintain cause bootstrap is weird -->
-      </ul>
-      <ul class="navbar-nav my-2 my-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active ">
-          <a class="nav-link" href="/events.html">Our Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/aboutus.html">About Us</a>
-        </li>
-      </ul>
-
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <a class="navbar-brand" href="/"><img src="/assets/logo/Logo_Light_Small.png" width="40" height="40" class="d-inline-block align-top" alt="" id="nav-logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse align-self-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Gotta maintain cause bootstrap is weird -->
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="/events.html">Our Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="jumbotron">
         <h1 class="display-3 text-center">Our Events</h1>
     </div>
-
     <div class="container section" id="events-section"></div>
-
     <div class="container section" id="loading-section">
         <div class="row justify-content-center">
             <div class="col-3 text-center">
@@ -53,15 +46,13 @@
             </div>
         </div>
     </div>
-
     <a href="#events-section" class="btn btn-outline-primary page-scroll" id="scroll-top-btn"><i class="fa fa-chevron-up"></i></a>
-
     <div class="container-fluid footer">
-      <div class="row justify-content-center text-center">
-        <div class="col-12 col-lg-6">
-          <h3 class="mailing-list">Want weekly updates on OSS? <a href="https://groups.google.com/forum/#!forum/ntuoss/join" target="_blank">Sign up</a> for our mailing list!</h3>
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-lg-6">
+                <h3 class="mailing-list">Want weekly updates on OSS? <a href="https://groups.google.com/forum/#!forum/ntuoss/join" target="_blank">Sign up</a> for our mailing list!</h3>
+            </div>
         </div>
-      </div>
         <div class="row justify-content-center" id="footer-social-buttons">
             <div class="col-12 col-lg-6">
                 <div class="container-fluid">
@@ -91,7 +82,6 @@
             </div>
         </div>
     </div>
-
     <div id="templates" hidden>
         <div class="row justify-content-center" id="event-card-template">
             <div class="col-11 col-lg-8">
@@ -109,7 +99,6 @@
             </div>
         </div>
     </div>
-
     <script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/jquery.easing/jquery.easing.min.js"></script>

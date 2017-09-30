@@ -67,7 +67,7 @@ function populateEventCards() {
 
     getEventsPromise.then((response) => {
         nextPaging = response.paging.next === undefined ? '' : response.paging.next;
-        
+
         let data = response.data;
         let $section = $('#events-section');
         for (const item of data) {

@@ -2,14 +2,15 @@
     // background-color: $ntuoss-blue;
     background-color: #2980b9;
 }
-p{
-  font-family: 'Open Sans', sans-serif;
+
+p {
+    font-family: 'Open Sans', sans-serif;
 }
 
-
-a:hover{
-  text-decoration: none;
+a:hover {
+    text-decoration: none;
 }
+
 #home-jumbotron-logo-row {
     height: 75vh;
 }
@@ -19,27 +20,23 @@ a:hover{
 
     h1 {
         font-family: 'Industry';
-        font-weight: 400;
-        // border: 5px solid black;
+        font-weight: 400; // border: 5px solid black;
         padding: 15px;
-        margin-top:10%;
+        margin-top: 10%;
     }
 }
+
 @media only screen and (max-width: 991px) {
-  #home-jumbotron-slogan-row{
-    margin-top:17%;
-  }
-  #home-jumbotron-logo-row{
-    height: 40vh;
-  }
-
-
+    #home-jumbotron-slogan-row {
+        margin-top: 17%;
+    }
+    #home-jumbotron-logo-row {
+        height: 40vh;
+    }
 }
 
 #home-jumbotron-arrow-row {
-    height: 10vh;
-    // padding-bottom:40px;
-
+    height: 10vh; // padding-bottom:40px;
     #home-jumbotron-arrow {
         font-size: 2rem;
         color: #000;
@@ -69,64 +66,68 @@ a:hover{
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
 @media only screen and (min-width: 768px) {
 
 
-    .navbar{
-      transition: background-color 300ms ease-in;
-      font-family: 'Industry', sans-serif;
+    .navbar {
+        transition: background-color 300ms ease-in;
+        font-family: 'Industry', sans-serif;
     }
-    .nav-link{
-      margin-left: 5px;
-      margin-bottom:5px;
-      margin-top: 0px;
-      font-size: 1em;
+    .nav-link {
+        margin-left: 5px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        font-size: 1em;
     }
-    .navbar-light .navbar-nav .nav-link{
-      color: rgba(255,255,255,0.5);
+    .navbar-light .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.5);
     }
-    .navbar-light .navbar-nav .nav-link:hover{
-      color: white;
-      transition: color 100ms linear;
-
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: white;
+        transition: color 100ms linear;
     }
-    .navbar-light .navbar-nav .active>.nav-link{
-      color: white;
+    .navbar-light .navbar-nav .active>.nav-link {
+        color: white;
     }
 }
-    .navbar{
-      transition: background-color 300ms ease-in;
-      font-family: 'Industry', sans-serif;
-    }
-    .nav-link{
-      margin-left: 5px;
-      margin-bottom:5px;
-      margin-top: 0px;
-      font-size: 1em;
-    }
-    .navbar-light .navbar-nav .nav-link{
-      color: rgba(0,0,0,0.5);
-    }
-    .navbar-light .navbar-nav .nav-link:hover{
-      color: black;
-      transition: color 100ms linear;
 
-    }
-    .navbar-light .navbar-nav .active>.nav-link{
-      color:black;
-    }
-
-.btn-block{
-  margin-top:20px;
+.navbar {
+    transition: background-color 300ms ease-in;
+    font-family: 'Industry', sans-serif;
 }
+
+.nav-link {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-size: 1em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: black;
+    transition: color 100ms linear;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: black;
+}
+
+.btn-block {
+    margin-top: 20px;
+}
+
 #home-section-events {
     .card-deck {
         margin-bottom: 30px;
     }
 
     .card {
-        margin-bottom: 10px;
-        // border-bottom-left-radius: 20px;
+        margin-bottom: 10px; // border-bottom-left-radius: 20px;
         // border-bottom-right-radius: 20px;
         // Experimental, I had nothing to do with this
     }
