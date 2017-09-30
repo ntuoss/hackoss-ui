@@ -8,6 +8,19 @@
     margin-top: 50px;
 }
 
+.mailing-list{
+  font-size:1.2em;
+  color:white;
+  a{
+    color: white;
+    border-bottom: 1px dotted white;
+  }
+  a:hover{
+    border-bottom: 1px solid white;
+
+  }
+
+}
 .footer .social-button {
     font-size: 24px;
     width: 50px;
@@ -15,7 +28,7 @@
     margin-bottom: 15px;
     border-radius: 100%;
     background-color: #fff;
-    
+
 }
 
 
