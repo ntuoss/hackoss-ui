@@ -8,6 +8,7 @@
     h1 {
         font-family: 'Industry';
         font-weight: 400;
+        font-size: 3rem;
         padding: 15px;
         margin-top: 10%;
     }
@@ -28,6 +29,24 @@
         &:hover {
             color: #fff;
         }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #home-jumbotron {
+        margin-top: 50px;
+    }
+
+    #home-jumbotron-slogan-row {
+        height: 15vh;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    #home-jumbotron-image-row {
+        height: 35vh;
     }
 }
 
@@ -54,8 +73,6 @@ a:hover {
     }
 
     .card {
-        margin-bottom: 10px; // border-bottom-left-radius: 20px;
-        // border-bottom-right-radius: 20px;
-        // Experimental, I had nothing to do with this
+        margin-bottom: 10px;
     }
 }

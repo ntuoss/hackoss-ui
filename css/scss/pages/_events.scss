@@ -1,9 +1,3 @@
-.jumbotron {
-    background-color: $ntuoss-blue;
-    font-family: 'Industry';
-    font-weight: 400;
-}
-
 .section {
     margin-bottom: 40px;
 }
@@ -32,10 +26,4 @@
     height: 50px;
     font-size: 1.4rem;
     display: none;
-}
-
-@media only screen and (max-width: 991px) {
-    .jumbotron {
-        margin-top: 15%; // font-size:20px;
-    }
 }

@@ -1,0 +1,13 @@
+.jumbotron {
+    background-color: $ntuoss-blue;
+    font-family: 'Industry';
+    font-weight: 400;
+    color: #fff;
+    border-radius: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    .jumbotron {
+        margin-top: 40px;
+    }
+}
