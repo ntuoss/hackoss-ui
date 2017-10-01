@@ -4,6 +4,8 @@ After cloning this repository locally, run the following:
 
 ```
 $ npm install
+$ rm -rf bower_components
+$ bower install
 $ gulp
 ```
 
