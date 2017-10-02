@@ -30,9 +30,10 @@ window.fbAsyncInit = function() {
 
             if ($(window).scrollTop() == $(document).height() - $(window).height()) {
                 if (nextPaging !== '') {
+                    $('#events-section-loading').show();
                     populateEventCards();
                 } else {
-                    $('#event-section-loading').hide();
+                    $('#events-section-loading').hide();
                 }
             }
         });
