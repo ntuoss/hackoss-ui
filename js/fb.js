@@ -47,10 +47,10 @@ function populateHomeCards() {
         let count = 3;
         let $cardDeck = $('#home-section-events .card-deck');
         for (const item of data) {
-            if (item.name.indexOf('TGIFHacks') === -1) continue;
+            if (item.name && item.name.indexOf('TGIFHacks') === -1) continue;
             let $card = $('#templates #event-card-template').clone().removeAttr('id');
-            $card.find('.card-title').text(item.name);
-            $card.find('.card-img-top').attr('src', item.cover.source);
+            if (item.name) $card.find('.card-title').text(item.name);
+            if (item.cover) $card.find('.card-img-top').attr('src', item.cover.source);
             $card.find('.btn').attr('href', 'https://www.facebook.com/events/' + item.id);
             $cardDeck.append($card);
             if (--count == 0) break;
@@ -75,42 +75,46 @@ function populateEventCards() {
 
             $card.find('.event-name').text(item.name);
 
-            let start = parseFBDate(item.start_time);
-            let end = parseFBDate(item.end_time);
-            let datetime = '';
-            datetime += start.toDateString();
-            datetime += ' at ';
-            datetime += start.toTimeString().substring(0, 5);
-            datetime += ' - ';
-            datetime += start.toDateString() === end.toDateString() ? '' : ' ' + end.toDateString();
-            datetime += end.toTimeString().substring(0, 5);
-            datetime += ' SGT'
-            $card.find('.event-datetime').text(datetime);
+            if (item.start_time && item.end_time) {
+                let start = parseFBDate(item.start_time);
+                let end = parseFBDate(item.end_time);
+                let datetime = '';
+                datetime += start.toDateString();
+                datetime += ' at ';
+                datetime += start.toTimeString().substring(0, 5);
+                datetime += ' - ';
+                datetime += start.toDateString() === end.toDateString() ? '' : ' ' + end.toDateString();
+                datetime += end.toTimeString().substring(0, 5);
+                datetime += ' SGT'
+                $card.find('.event-datetime').text(datetime);
+            }
 
             let maxChars = 380;
             let $eventDescription = $card.find('.event-description');
-            if (item.description && item.description.length > maxChars) {
-                let shortText = item.description.substring(0, maxChars);
-                let restOfText = item.description.substring(maxChars);
-                $eventDescription.text(shortText);
-                $eventDescription.append('<span class="ellipsis">...</span>')
-                $eventDescription.append('<span class="more-text"></span>');
-                $eventDescription.find('.more-text').text(restOfText).hide();
-                $eventDescription.append('&nbsp;&nbsp;<a href="javascript:void(0);" class="toggle-text" data-toggle="false">Show More</a>');
-                $eventDescription.find('.toggle-text').click(function(event) {
-                    let $this = $(this);
-                    if ($this.attr('data-toggle') === 'false') {
-                        $this.text('Show Less');
-                        $this.attr('data-toggle', 'true');
-                    } else {
-                        $this.text('Show More');
-                        $this.attr('data-toggle', 'false');
-                    }
-                    $this.parent().find('.ellipsis').toggle();
-                    $this.parent().find('.more-text').toggle();
-                });
-            } else {
-                $eventDescription.text(item.description);
+            if (item.description) {
+                if (item.description.length > maxChars) {
+                    let shortText = item.description.substring(0, maxChars);
+                    let restOfText = item.description.substring(maxChars);
+                    $eventDescription.text(shortText);
+                    $eventDescription.append('<span class="ellipsis">...</span>')
+                    $eventDescription.append('<span class="more-text"></span>');
+                    $eventDescription.find('.more-text').text(restOfText).hide();
+                    $eventDescription.append('&nbsp;&nbsp;<a href="javascript:void(0);" class="toggle-text" data-toggle="false">Show More</a>');
+                    $eventDescription.find('.toggle-text').click(function(event) {
+                        let $this = $(this);
+                        if ($this.attr('data-toggle') === 'false') {
+                            $this.text('Show Less');
+                            $this.attr('data-toggle', 'true');
+                        } else {
+                            $this.text('Show More');
+                            $this.attr('data-toggle', 'false');
+                        }
+                        $this.parent().find('.ellipsis').toggle();
+                        $this.parent().find('.more-text').toggle();
+                    });
+                } else {
+                    $eventDescription.text(item.description);
+                }
             }
 
             if (item.cover) {
