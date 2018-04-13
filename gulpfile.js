@@ -12,6 +12,7 @@ var babel = require('gulp-babel');
 // Init BrowserSync
 gulp.task('browserSync', function() {
     browserSync.init({ server: { baseDir: './' } });
+});
 
 // Compile Sass
 gulp.task('sass', function() {
