@@ -4,7 +4,7 @@ After cloning this repository locally, run the following:
 
 ```
 $ npm install
-$ npm i -g bower gulp // This works on my computer, else bower and gulp cli cannot be used.
+$ npm i -g bower gulp
 $ bower install
 $ gulp
 ```

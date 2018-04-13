@@ -11,8 +11,7 @@ var babel = require('gulp-babel');
 
 // Init BrowserSync
 gulp.task('browserSync', function() {
-    browserSync.init({ server: { baseDir: './' } }); // browser-sync doesn't work without this (in my computer)
-});
+    browserSync.init({ server: { baseDir: './' } });
 
 // Compile Sass
 gulp.task('sass', function() {
