@@ -3,7 +3,7 @@
 }
 
 #home-jumbotron-slogan-row {
-    height: 25vh;
+    height: 20vh;
 
     h1 {
         font-family: $ntuoss-headings-font-stack;
@@ -15,17 +15,36 @@
 }
 
 #home-jumbotron-image-row {
-    height: 65vh;
+    height: 55vh;
+    margin-top:10px;
+}
+#home-jumbotron-button-row {
+    height: 15vh;
+
+    .btn-outline-primary{
+      color:white;
+      border: 1px white solid;
+      border-radius:5px;
+      width:50%;
+      margin:40px;
+      margin-top:60px;
+      padding:10px;
+      font-size:1.3em;
+      font-family: $ntuoss-headings-font-stack;
+    }
+    .btn-outline-primary:hover{
+      background-color: $ntuoss-blue;
+    }
 }
 
 #home-jumbotron-arrow-row {
     height: 10vh;
-    
+
     #home-jumbotron-arrow {
         font-size: 2em;
         color: #000;
         transition: color 0.5s ease-in-out;
-    
+
         &:hover {
             color: #fff;
         }
@@ -46,7 +65,7 @@
     }
 
     #home-jumbotron-image-row {
-        height: 35vh;
+        height: 20vh;
     }
 }
 
