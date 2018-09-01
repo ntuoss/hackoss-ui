@@ -1,6 +1,22 @@
-# Hackosss
+# HackOSS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+## Clone the repo
+
+```bash
+git clone git@github.com:ntuoss/Sparrow-web.git
+cd Sparrow-web
+git checkout -b <YOUR-LOCAL-BRANCH-NAME>
+```
+
+## Push to the repo
+
+```bash
+git add <FILES-YOU-WANT-TO-PUSH>
+git commit -m "<MESSAGES-TO-RECORD-YOUR-PROGRESS>"
+git push -u origin <YOUR-REMOTE-BRANCH-NAME>
+```
+
+When you push to the repo, you can choose to push with your local branch name or a new name u would like to have in remote repo.
 
 ## Development server
 
