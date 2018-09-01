@@ -3,8 +3,9 @@
 ## Clone the repo
 
 ```bash
-git clone git@github.com:ntuoss/Sparrow-web.git
-cd Sparrow-web
+git clone git@github.com:ntuoss/HackOSS.git
+cd HackOSS/
+git checkout develop
 git checkout -b <YOUR-LOCAL-BRANCH-NAME>
 ```
 
