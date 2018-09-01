@@ -3,7 +3,7 @@
 ## Clone the repo
 
 ```bash
-git clone git@github.com:ntuoss/HackOSS.git
+git clone https://github.com/ntuoss/hackoss.git 
 cd HackOSS/
 git checkout develop
 git checkout -b <YOUR-LOCAL-BRANCH-NAME>
