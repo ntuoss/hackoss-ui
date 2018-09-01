@@ -9,6 +9,14 @@ git checkout develop
 git checkout -b <YOUR-LOCAL-BRANCH-NAME>
 ```
 
+## Develop
+**Make sure your are in your own feature branch**
+```bash
+git branch -v
+npm install
+npm start
+```
+
 ## Push to the repo
 
 ```bash
