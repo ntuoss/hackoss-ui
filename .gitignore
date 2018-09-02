@@ -1,42 +1,40 @@
-node_modules/
-.sass-cache
-package-lock.json
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Track only relevant Bower files.
-bower_components/*
+# compiled output
+/dist
+/tmp
+/out-tsc
 
-!bower_components/bootstrap
-bower_components/bootstrap/*
-!bower_components/bootstrap/dist
-bower_components/bootstrap/dist/*
-!bower_components/bootstrap/dist/css
-bower_components/bootstrap/dist/css/*
-!bower_components/bootstrap/dist/css/bootstrap.min.css
-!bower_components/bootstrap/dist/js
-bower_components/bootstrap/dist/js/*
-!bower_components/bootstrap/dist/js/bootstrap.min.js
+# dependencies
+/node_modules
 
-!bower_components/font-awesome
-bower_components/font-awesome/*
-!bower_components/font-awesome/fonts
-!bower_components/font-awesome/css
-bower_components/font-awesome/css/*
-!bower_components/font-awesome/css/font-awesome.min.css
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-!bower_components/jquery
-bower_components/jquery/*
-!bower_components/jquery/dist
-bower_components/jquery/dist/*
-!bower_components/jquery/dist/jquery.min.js
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+hackoss\.code-workspace
 
-!bower_components/jquery.easing
-bower_components/jquery.easing/*
-!bower_components/jquery.easing/jquery.easing.min.js
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
-!bower_components/popper.js
-bower_components/popper.js/*
-!bower_components/popper.js/dist
-bower_components/popper.js/dist/*
-!bower_components/popper.js/dist/umd
-bower_components/popper.js/dist/umd/*
-!bower_components/popper.js/dist/umd/popper.min.js
+# System Files
+.DS_Store
+Thumbs.db
