@@ -1,0 +1,83 @@
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #222;
+  } @else {
+    @return #fff;
+  }
+}
+@function set-highlight-color($color, $color-base) {
+  @if (lightness($color) > 50) {
+    @return darken($color-base, 10);
+  } @else {
+    @return lighten($color-base, 10);
+  }
+}
+
+$primary-color: rgb(69, 69, 78);
+$secondary-color: set-text-color($primary-color);
+
+$highlight-color-base: #4c9092;
+$highlight-color: set-highlight-color($primary-color, $highlight-color-base);
+
+$landing-image: url("https://avatars.mds.yandex.net/get-pdb/1209663/b075c80e-a715-45e7-a18a-c4fc3d8bcea7/orig");
+
+$middle-size: 18rem;
+$small-size: 15rem;
+
+@mixin overlay($opacity) {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: $primary-color;
+  opacity: $opacity;
+}
+
+@mixin hover-color($color) {
+  &:hover {
+    @include ease;
+    color: $color;
+  }
+}
+
+@mixin ease {
+  transition: all 0.5s ease-out;
+}
+
+@mixin mediaXS {
+  // @media screen and (max-width: 321px) {
+  @media screen and (max-width: 321px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mediaSmSp {
+  @media screen and (max-height: 420px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 769px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
