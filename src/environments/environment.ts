@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  eventbriteToken: 'JH5YG6RWF7BDGBLRGPBJ',
+  eventbriteUrl: 'www.eventbriteapi.com'
 };
 
 /*
