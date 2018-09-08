@@ -16,6 +16,12 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
+  <button (click)="getEvents()">Get Events</button>
+  <div class="event" *ngFor="let event of events">
+    <h1>{{event.title}}</h1>
+    <p>{{event.description}}</p>
+    <p>{{event.start}}</p>
+  </div>
 </ul>
 
 <router-outlet></router-outlet>
