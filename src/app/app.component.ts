@@ -1,14 +1,14 @@
-import { Component } from "@angular/core";
-import { CalendarService } from "./services/calendar/calendar.service";
-import { EventsService, Event } from "./services/events/events.service";
+import { Component } from '@angular/core';
+import { CalendarService } from './services/calendar/calendar.service';
+import { EventsService, Event } from './services/events/events.service';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = "app";
+  title = 'app';
   events: Event[];
 
   constructor(
