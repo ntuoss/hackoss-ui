@@ -8,7 +8,7 @@ export const environment = {
   googleCalendarId: "ntuoss@gmail.com",
   googleApiKey: "AIzaSyDWzoB1A_zTDM9eVClHKkwR5IT3UOVeats",
   eventbriteToken: "JH5YG6RWF7BDGBLRGPBJ",
-  eventbriteUrl: "www.eventbriteapi.com"
+  eventbriteApiUrl: "www.eventbriteapi.com"
 };
 
 /*
