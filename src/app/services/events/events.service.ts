@@ -1,28 +1,54 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class EventsService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getEvents(): Promise<Event[]> {
-    return this.http.get(`https://${environment.eventbriteUrl}/v3/users/me/owned_events/`, {
-      params: { token: environment.eventbriteToken }
-    }).toPromise()
-    .then((response: any) =>
-      response.events.map(event => ({
-        title: event.name.text,
-        description: event.description.text,
-        start: event.start.utc
-      })));
+  getEventbriteEvents(): Promise<Event[]> {
+    return this.http
+      .get(
+        `https://${environment.eventbriteApiUrl}/v3/users/me/owned_events/`,
+        {
+          params: { token: environment.eventbriteToken }
+        }
+      )
+      .toPromise()
+      .then((response: any) =>
+        response.events.map(event => ({
+          title: event.name.text,
+          description: event.description.text,
+          start: event.start.utc
+        }))
+      );
   }
 
+  getGoogleCalendarEvents(): Promise<Event[]> {
+    return this.http
+      .get(
+        `https://${environment.googleApiUrl}/calendar/v3/calendars/${
+          environment.googleCalendarId
+        }/events`,
+        {
+          params: { key: environment.googleApiKey }
+        }
+      )
+      .toPromise()
+      .then((response: any) =>
+        response.items
+          .reverse()
+          .filter((v, i) => i < 10)
+          .map(event => ({
+            title: event.summary,
+            description: event.description,
+            start: event.start.dateTime
+          }))
+      );
+  }
 }
-
 export interface Event {
   title: string;
   description: string;
