@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  googleApiUrl: 'www.googleapis.com',
+  googleCalendarId: 'ntuoss@gmail.com',
+  googleApiKey: 'AIzaSyDWzoB1A_zTDM9eVClHKkwR5IT3UOVeats'
 };
 
 /*
