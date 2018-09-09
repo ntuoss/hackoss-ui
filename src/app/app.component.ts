@@ -1,22 +1,12 @@
-import { Component } from "@angular/core";
-import { EventsService, Event } from "./services/events/events.service";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = "app";
-  events: Event[];
+  title = 'app';
 
-  constructor(private eventsService: EventsService) {}
-
-  async getGoogleCalendarEvents() {
-    this.events = await this.eventsService.getGoogleCalendarEvents();
-  }
-
-  async getEventbriteEvents() {
-    this.events = await this.eventsService.getEventbriteEvents();
-  }
+  constructor() {}
 }

@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  googleApiUrl: "www.googleapis.com",
-  googleCalendarId: "ntuoss@gmail.com",
-  googleApiKey: "AIzaSyDWzoB1A_zTDM9eVClHKkwR5IT3UOVeats",
-  eventbriteToken: "JH5YG6RWF7BDGBLRGPBJ",
-  eventbriteApiUrl: "www.eventbriteapi.com"
+  googleApiUrl: 'www.googleapis.com',
+  googleCalendarId: 'ntuoss@gmail.com',
+  googleApiKey: 'AIzaSyDWzoB1A_zTDM9eVClHKkwR5IT3UOVeats',
+  eventbriteToken: 'JH5YG6RWF7BDGBLRGPBJ',
+  eventbriteApiUrl: 'www.eventbriteapi.com'
 };
 
 /*
