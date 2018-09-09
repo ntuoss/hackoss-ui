@@ -18,13 +18,4 @@
   </li>
 </ul>
 
-<button (click)="getEventbriteEvents()">Get Events</button>
-<div class="event" *ngFor="let event of events">
-  <h1>{{event.title}}</h1>
-  <p>{{event.description}}</p>
-  <p>{{event.start}}</p>
-</div>
-
-<button (click)="getGoogleCalendarEvents()">Get Google Calendar Events</button>
-
 <router-outlet></router-outlet>
