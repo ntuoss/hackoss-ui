@@ -1,0 +1,7 @@
+<button (click)="getEventbriteEvents()">Get Eventbrite Events</button>
+<button (click)="getGoogleCalendarEvents()">Get Google Calendar Events</button>
+<div class="event" *ngFor="let event of events">
+  <h1><a [href]="event.url" target="_blank">{{event.title}}</a></h1>
+  <p>{{event.description}}</p>
+  <p>{{event.start}}</p>
+</div>
