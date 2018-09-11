@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { EventsComponent } from './events/events.component';
 import { CommonModule } from '@angular/common';
+import { DataComponent } from './data/data.component';
 
 const PAGES_COMPONENTS = [
-    EventsComponent
+    EventsComponent,
+    DataComponent
 ];
 
 @NgModule({
@@ -14,5 +16,8 @@ const PAGES_COMPONENTS = [
     CommonModule
   ],
   providers: [],
+  exports: [
+    ...PAGES_COMPONENTS
+  ]
 })
 export class PagesModule { }
