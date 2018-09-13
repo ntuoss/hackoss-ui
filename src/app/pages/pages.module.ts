@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { EventsComponent } from './events/events.component';
 import { CommonModule } from '@angular/common';
+import { PhotosComponent } from './photos/photos.component';
 
 const PAGES_COMPONENTS = [
     EventsComponent
@@ -9,6 +10,7 @@ const PAGES_COMPONENTS = [
 @NgModule({
   declarations: [
     ...PAGES_COMPONENTS,
+    PhotosComponent,
   ],
   imports: [
     CommonModule
