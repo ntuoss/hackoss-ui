@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { EventsService } from './events/events.service';
+import { PhotosService } from './photos/photos.service';
 
 const SERVICES = [
-    EventsService
+    EventsService,
+    PhotosService
 ];
 
 @NgModule({

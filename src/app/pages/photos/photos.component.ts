@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PhotosService, Photo } from '../services/photos/photos.service';
+import { Component } from '@angular/core';
+import { PhotosService } from '../../services/photos/photos.service';
 
 @Component({
   selector: 'app-photos',
@@ -8,12 +8,10 @@ import { PhotosService, Photo } from '../services/photos/photos.service';
 })
 export class PhotosComponent {
 
-  photos: Photo[];
-
   constructor(private photosService: PhotosService) { }
 
   async getPhotos() {
-    this.photos = await this.photosService.getPhotos();
+    console.log(await this.photosService.getPhotos());
   }
 
 }
