@@ -1,1 +1,6 @@
 <button (click)="getPhotos()">Get Photos</button>
+<h2>Facebook Photos</h2>
+<div class="album" *ngFor="let album of albums">
+  <h5>{{album.name}}</h5>
+  <img [src]="photo.imageUrls[0]" alt="" *ngFor="let photo of album.photos">
+</div>

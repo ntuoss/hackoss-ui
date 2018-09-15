@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PhotosService } from '../../services/photos/photos.service';
+import { PhotosService, Album } from '../../services/photos/photos.service';
 
 @Component({
   selector: 'app-photos',
@@ -8,10 +8,12 @@ import { PhotosService } from '../../services/photos/photos.service';
 })
 export class PhotosComponent {
 
+  albums: Album[];
+
   constructor(private photosService: PhotosService) { }
 
   async getPhotos() {
-    console.log(await this.photosService.getPhotos());
+    this.albums = await this.photosService.getFacebookPageAlbums();
   }
 
 }
