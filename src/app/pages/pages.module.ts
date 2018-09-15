@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { EventsComponent } from './events/events.component';
 import { PhotosComponent } from './photos/photos.component';
 import { CommonModule } from '@angular/common';
+import { DataComponent } from './data/data.component';
 
 const PAGES_COMPONENTS = [
   EventsComponent,
+  DataComponent,
   PhotosComponent
 ];
 
