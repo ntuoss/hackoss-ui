@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { EventsComponent } from './events/events.component';
-import { CommonModule } from '@angular/common';
 import { PhotosComponent } from './photos/photos.component';
+import { CommonModule } from '@angular/common';
 
 const PAGES_COMPONENTS = [
-    EventsComponent
+  EventsComponent,
+  PhotosComponent
 ];
 
 @NgModule({
   declarations: [
-    ...PAGES_COMPONENTS,
-    PhotosComponent,
+    ...PAGES_COMPONENTS
   ],
   imports: [
     CommonModule
   ],
-  providers: [],
+  exports: [
+    ... PAGES_COMPONENTS
+  ]
 })
 export class PagesModule { }
