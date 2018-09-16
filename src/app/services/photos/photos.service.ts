@@ -10,7 +10,7 @@ export class PhotosService {
   constructor(private http: HttpClient) { }
 
   getFacebookPageAlbums(): Promise<Album[]> {
-    return this.http.get(`https://${environment.facebookApiUrl}/${environment.facebookPageId}`, {
+    return this.http.get(`https://graph.facebook.com/v3.1/${environment.facebookPageId}`, {
       params: {
         'access_token': environment.facebookAccessToken,
         'fields': 'albums{name,photos{images,link}}'

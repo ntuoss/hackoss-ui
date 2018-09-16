@@ -9,7 +9,7 @@ export class EventsService {
   constructor(private http: HttpClient) {}
 
   getEventbriteEvents(): Promise<Event[]> {
-    return this.http.get(`https://${environment.eventbriteApiUrl}/v3/users/me/owned_events/`, {
+    return this.http.get(`https://www.eventbriteapi.com/v3/users/me/owned_events/`, {
       params: { token: environment.eventbriteToken }
     }).toPromise()
       .then((response: { events: any[] }) =>
@@ -23,7 +23,7 @@ export class EventsService {
   }
 
   getGoogleCalendarEvents(limit: number = 10): Promise<Event[]> {
-    return this.http.get(`https://${environment.googleApiUrl}/calendar/v3/calendars/${environment.googleCalendarId}/events`, {
+    return this.http.get(`https://www.googleapis.com/calendar/v3/calendars/${environment.googleCalendarId}/events`, {
       params: { key: environment.googleApiKey }
     }).toPromise()
       .then((response: { items: any[] }) =>
