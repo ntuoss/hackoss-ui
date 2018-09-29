@@ -9,6 +9,7 @@ import { FooterComponent } from './home/footer/footer.component';
 import { LocationComponent } from './home/location/location.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { EventsComponent } from './home/events/events.component';
+import { NavigationComponent } from './home/navigation/navigation.component';
 
 const PAGES_COMPONENTS = [
   EventsComponent,
@@ -20,12 +21,13 @@ const PAGES_COMPONENTS = [
   FooterComponent,
   LocationComponent,
   ContactComponent,
-  EventsComponent
+  EventsComponent,
+  NavigationComponent
 ];
 
 @NgModule({
   declarations: [
-    ...PAGES_COMPONENTS
+    ...PAGES_COMPONENTS,
   ],
   imports: [
     CommonModule

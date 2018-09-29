@@ -10,6 +10,8 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const videoElement: any = document.getElementById('landing-background-video');
+    videoElement.muted = 'muted';
   }
 
 }
