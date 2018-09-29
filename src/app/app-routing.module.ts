@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EventsComponent } from './pages/events/events.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
-    path: 'events',
-    component: EventsComponent
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: '',
-    redirectTo: 'events',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'events',
+    redirectTo: 'home',
     pathMatch: 'full'
   }
 ];
