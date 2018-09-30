@@ -19,8 +19,11 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "@firebase/database": "^0.3.4",
+    "@ng-bootstrap/ng-bootstrap": "^3.2.2",
+    "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
     "firebase": "^5.4.2",
+    "font-awesome": "^4.7.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
