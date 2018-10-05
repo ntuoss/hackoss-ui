@@ -44,7 +44,7 @@ export class NavigationComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.isAtTheTop = (scrollOffset / window.innerHeight) < 0.4;
+    this.isAtTheTop = (scrollOffset / window.innerHeight) < 0.2;
   }
 
 }
