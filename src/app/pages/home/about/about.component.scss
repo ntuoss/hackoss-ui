@@ -1,0 +1,51 @@
+p {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.aboutus-overlay1 {
+    padding: 10vh 10%;
+    text-align: center;
+
+    .headline {
+        font-size: 2rem;
+    }
+
+    .subline {
+        font-size: 1.5rem;
+    }
+
+    .aboutus-overlay1-content {
+        margin-bottom: 10vh;
+    }
+
+    .container {
+        margin: 2vh auto;
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+    
+            .column {
+                flex: 0 0 33.3333333%;
+                padding: 0 2vw;
+
+                .container-context {
+                    margin: 2vh 0;
+                }
+            }
+    
+            .border-side {
+                border-left: 1px solid #BABABA;
+                border-right: 1px solid #BABABA;
+            }
+        }
+    
+        .border-middle {
+            border-bottom: 1px solid #BABABA;
+            height: 1px;
+            width: 100%;
+            margin: 2vh 0;
+        }
+    }
+}
