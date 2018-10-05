@@ -10,6 +10,7 @@ import { LocationComponent } from './home/location/location.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { EventsComponent } from './home/events/events.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
+import { RouterModule } from '@angular/router';
 
 const PAGES_COMPONENTS = [
   EventsComponent,
@@ -30,7 +31,8 @@ const PAGES_COMPONENTS = [
     ...PAGES_COMPONENTS,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     ... PAGES_COMPONENTS
