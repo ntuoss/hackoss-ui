@@ -1,6 +1,9 @@
+<div class="featured-event" *ngIf="featuredEvent">
+  <img [src]="featuredEvent.original_logo" (click)="cardClick(featuredEvent.url)" alt="logo">
+</div>
 <div class="event-container">
   <div class="event" *ngFor="let event of events">
-    <div class="card">
+    <div class="card" (click)="showDetails(event)">
       <img [src]="event.logo" alt="logo" class="logo">
       <div class="content">
         <h4 class="title"><a [href]="event.url" target="_blank">{{event.title}}</a></h4>

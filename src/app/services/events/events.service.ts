@@ -13,6 +13,12 @@ export class EventsService {
     return str.substr(0, str.lastIndexOf(separator, maxLen));
   }
 
+  async getFeaturedEvent(): Promise<Event> {
+    const eventList = await this.getEventbriteEvents();
+    const upcomingEvents = eventList.filter((e) => new Date(e.start).getTime() > Date.now());
+    return upcomingEvents.length > 0 ? upcomingEvents[upcomingEvents.length - 1] : null;
+  }
+
   getEventbriteEvents(): Promise<Event[]> {
     return this.http.get(`https://www.eventbriteapi.com/v3/users/me/owned_events/`, {
       params: {
@@ -31,6 +37,7 @@ export class EventsService {
           start: event.start.utc,
           url: event.url,
           logo: event.logo.url,
+          original_logo: event.logo.original.url,
           location: event.venue.address.localized_multi_line_address_display
         }))
       );
@@ -61,5 +68,6 @@ export interface Event {
   start: string;
   url: string;
   logo: string;
+  original_logo: string;
   location: string[];
 }

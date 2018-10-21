@@ -9,6 +9,7 @@ import { EventsService, Event } from '../../../services/events/events.service';
 export class EventsComponent implements OnInit {
 
   events: Event[] = [];
+  featuredEvent: Event;
   constructor(private eventsService: EventsService) { }
 
   ngOnInit() {
@@ -18,12 +19,17 @@ export class EventsComponent implements OnInit {
   // async getGoogleCalendarEvents() {
   //   this.events = await this.eventsService.getGoogleCalendarEvents();
   // }
+  showDetails(event) {
+    console.log(event);
+  }
 
   async getEventbriteEvents() {
     this.events = await this.eventsService.getEventbriteEvents();
+    this.featuredEvent = await this.eventsService.getFeaturedEvent();
+    console.log(this.featuredEvent);
   }
   cardClick(url) {
-    // window.open(url);
+    window.open(url);
   }
 
   getDateFromUTC(time) {

@@ -45,7 +45,7 @@ library.add(...FONTAWESOME_ICONS);
     FontAwesomeModule
   ],
   exports: [
-    ... PAGES_COMPONENTS
+    ...PAGES_COMPONENTS
   ]
 })
 export class PagesModule { }
