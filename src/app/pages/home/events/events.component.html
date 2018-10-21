@@ -1,7 +1,25 @@
-<button (click)="getEventbriteEvents()">Get Eventbrite Events</button>
-<button (click)="getGoogleCalendarEvents()">Get Google Calendar Events</button>
-<div class="event" *ngFor="let event of events">
-  <h1><a [href]="event.url" target="_blank">{{event.title}}</a></h1>
-  <p>{{event.description}}</p>
-  <p>{{event.start}}</p>
+<div class="event-container">
+  <div class="event" *ngFor="let event of events">
+    <div class="card">
+      <img [src]="event.logo" alt="logo" class="logo">
+      <div class="content">
+        <h4 class="title"><a [href]="event.url" target="_blank">{{event.title}}</a></h4>
+        <h5 class="summary">
+          {{event.summary}}
+        </h5>
+      </div>
+      <div class="content">
+        <strong class="time">
+          {{getDateFromUTC(event.start)}}
+        </strong>
+        <div class="location" *ngFor="let line of event.location">
+          <small>
+            {{line}}
+          </small>
+        </div>
+      </div>
+      <button type="button" (click)="cardClick(event.url)" class="btn btn-outline-dark btn-lg">{{ isPastEvent() ?
+        'Register': 'Review'}}</button>
+    </div>
+  </div>
 </div>
