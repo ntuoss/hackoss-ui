@@ -13,7 +13,8 @@ import { NavigationComponent } from './home/navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
+import { faLocationArrow, faMapMarkedAlt, faMobileAlt,faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+
 
 const PAGES_COMPONENTS = [
   EventsComponent,
@@ -30,7 +31,10 @@ const PAGES_COMPONENTS = [
 ];
 
 const FONTAWESOME_ICONS = [
-  faLocationArrow
+  faLocationArrow,
+  faMapMarkedAlt,
+  faMobileAlt,
+  faEnvelopeOpen,
 ];
 
 library.add(...FONTAWESOME_ICONS);

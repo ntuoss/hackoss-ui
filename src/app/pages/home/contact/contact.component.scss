@@ -1,39 +1,20 @@
-<<<<<<< HEAD
 :host {
   display: block;
-  height: 100vh;
+  height: 80vh;
   background:#FFFFFF;
+  padding-top: 5vh;
 }
 
 .container-fluid{
-  height:70%;
-  
+  .row:first-of-type{
+    height: 20vh;
+    .col{
+      .h1{
+        @keyframes blink {
+          from, to { color: transparent; }
+          50% { color:	#00BFFF; }
+        }
+      }
+    }
+  }
 }
-// .contactus-background-container {
-//   overflow: hidden;
-//   height: 100%;
-//   width: 100%;
-  
-//   video {
-//     top: 0;
-//     transform: rotate(90deg) scale(1.2,1.2);
-//     width:100%;
-//   }
-  
-//   .video-part{
-//     width:40%;
-//   }
-// }
-
-// .contactus-content, th, td {
-//   // border: 1px solid white;
-//   width:100%;
-  
-//   .message{
-//     height:40%;
-//     width:100%;
-//   }
-// }
-
-=======
->>>>>>> parent of 65725f6... Contact page rough outlook - improved
