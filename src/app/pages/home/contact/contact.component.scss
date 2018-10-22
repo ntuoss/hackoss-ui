@@ -1,34 +1,36 @@
 :host {
-    display: block;
-    height: 100vh;
-    background: black;
-  }
+  display: block;
+  height: 100vh;
+  background:#FFFFFF;
+}
+
+.container-fluid{
+  height:70%;
   
-  .contactus-background-container {
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+}
+// .contactus-background-container {
+//   overflow: hidden;
+//   height: 100%;
+//   width: 100%;
   
-    video {
-      top: 0;
-      transform: rotate(90deg) scale(1.2,1.2);
-      width:100%;
-    }
-
-    .video-part{
-        width:40%;
-    }
-  }
-
-  .contactus-content, th, td {
-    // border: 1px solid white;
-    width:100%;
-
-    .message{
-        height:40%;
-        width:100%;
-    }
-  }
-
-
+//   video {
+//     top: 0;
+//     transform: rotate(90deg) scale(1.2,1.2);
+//     width:100%;
+//   }
   
+//   .video-part{
+//     width:40%;
+//   }
+// }
+
+// .contactus-content, th, td {
+//   // border: 1px solid white;
+//   width:100%;
+  
+//   .message{
+//     height:40%;
+//     width:100%;
+//   }
+// }
+
