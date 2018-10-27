@@ -4,11 +4,13 @@ p {
 }
 
 .aboutus-overlay1 {
-    padding: 10vh 10%;
+    height: 100vh;
+    padding: 15vh 10%;
     text-align: center;
 
     .headline {
         font-size: 2rem;
+        padding-bottom: 3rem;
     }
 
     .subline {
