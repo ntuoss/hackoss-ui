@@ -13,13 +13,13 @@ export class EventsService {
     return str.substr(0, str.lastIndexOf(separator, maxLen));
   }
 
-  async getFeaturedEvent(): Promise<Event> {
-    const eventList = await this.getEventbriteEvents();
+  async getFeaturedEvent({ wordCount = 400 }): Promise<Event> {
+    const eventList = await this.getEventbriteEvents(wordCount);
     const upcomingEvents = eventList.filter((e) => new Date(e.start).getTime() > Date.now());
     return upcomingEvents.length > 0 ? upcomingEvents[upcomingEvents.length - 1] : null;
   }
 
-  getEventbriteEvents(): Promise<Event[]> {
+  getEventbriteEvents(wordCount: number): Promise<Event[]> {
     return this.http.get(`https://www.eventbriteapi.com/v3/users/me/owned_events/`, {
       params: {
         token: environment.eventbriteToken,
@@ -31,9 +31,9 @@ export class EventsService {
         response.events.map(event => ({
           title: event.name.text,
           description: event.description.text,
-          summary: event.description.text.length < 400
+          summary: event.description.text.length < wordCount
             ? event.description.text
-            : event.description.text.substr(0, event.description.text.lastIndexOf(' ', 400)) + '...',
+            : event.description.text.substr(0, event.description.text.lastIndexOf(' ', wordCount)) + '...',
           start: event.start.utc,
           url: event.url,
           logo: event.logo.url,

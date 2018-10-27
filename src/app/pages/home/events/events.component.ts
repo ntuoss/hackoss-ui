@@ -16,27 +16,7 @@ export class EventsComponent implements OnInit {
     this.getEventbriteEvents();
   }
 
-  // async getGoogleCalendarEvents() {
-  //   this.events = await this.eventsService.getGoogleCalendarEvents();
-  // }
-  showDetails(event) {
-    console.log(event);
-  }
-
   async getEventbriteEvents() {
-    this.events = await this.eventsService.getEventbriteEvents();
-    this.featuredEvent = await this.eventsService.getFeaturedEvent();
-    console.log(this.featuredEvent);
-  }
-  cardClick(url) {
-    window.open(url);
-  }
-
-  getDateFromUTC(time) {
-    return new Date(time).toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-  }
-
-  isPastEvent(time) {
-    return (new Date(time).getTime() < Date.now());
+    this.events = await this.eventsService.getEventbriteEvents(200);
   }
 }

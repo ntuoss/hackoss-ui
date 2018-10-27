@@ -1,84 +1,30 @@
 @import '../../../../assets/config.scss';
-a {
-    text-decoration: none;
-    color: $highlight-color;
-}
-button {
-    align-self: center;
-    border: 1px solid $highlight-color;
-    color: $highlight-color;
-    transition: 0.4s;
-    margin-bottom: 2rem;
-    &:hover {
-        border: 1px solid transparent;
-        background-color:$highlight-color;
-        color: $secondary-color;
-    }
-    &:active {
-        background-color: darken($highlight-color, 20);
-    }
-    &:focus {
-        box-shadow: none;
-    }
-}
-.featured-event {
-    transform: translateY(2rem);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-        box-shadow: 0 0 100px rgba($primary-color, 0.8);
-        width: 80%;
-        cursor: pointer;
-    }
-    .text {
-        display: none;
-    }
-}
+
+// .featured-event {
+//     transform: translateY(2rem);
+//     height: 100vh;
+//     width: 100vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     img {
+//         box-shadow: 0 0 100px rgba($primary-color, 0.8);
+//         width: 80%;
+//         cursor: pointer;
+//     }
+//     .text {
+//         display: none;
+//     }
+// }
 .event-container {
     display: grid;
-    padding: 5rem;
+    padding: 10rem 5rem;
+    height: 100vh;
     grid-template-columns: repeat(3 ,1fr);
     grid-template-rows: auto;
     grid-row-gap: 3rem;
     justify-items: center;
-    .event {
-        display: flex;
-        justify-content: center;
-    }
-    .card {
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        border: none;
-        width: 90%;
-        height: 100%;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 0 20px rgba($primary-color, 0.5);
-        transition: 1s;
-        &:hover {
-            box-shadow: 0 0 30px rgba($primary-color, 0.8);
-        }
-        img {
-            width:100%;
-        }
-        
-    }
-    .content {
-        padding: 2rem;
-        .title {
-            font-weight: 600;
-            padding: 0.5rem 0;
-            color: $highlight-color;
-        }
-        .summary {
-            font-weight:200;
-            color: lighten($primary-color, 20);
-        }
-    }
+    
 }
 
 @include mediaLg {

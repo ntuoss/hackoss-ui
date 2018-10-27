@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PhotosComponent } from './photos/photos.component';
 import { CommonModule } from '@angular/common';
 import { DataComponent } from './data/data.component';
+import { EventCardComponent } from './event-card/event-card.component';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './home/landing/landing.component';
 import { AboutComponent } from './home/about/about.component';
@@ -15,9 +16,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 
+
 const PAGES_COMPONENTS = [
-  EventsComponent,
   DataComponent,
+  EventCardComponent,
   PhotosComponent,
   HomeComponent,
   LandingComponent,
