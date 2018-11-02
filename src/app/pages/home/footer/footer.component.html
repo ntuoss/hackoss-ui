@@ -2,20 +2,29 @@
 <nav class=" navbar navbar-dark bg-dark mt-10 clearfix">
 
     <div class="navbar-expand m-auto navbar-text">
-        Made 
-        <i class="fas fa-heart">
-
-        </i>
+        Made with
+        <fa-icon [icon] = "heart" class = "hrt" ></fa-icon>
         by NTUOSS
         
     </div>    
     <div class="navbar-expand m-auto navbar-text ">
         Follow Us On Social Media
-        <a href= "https://www.facebook.com/ntuoss/?ref=br_rs">
+        <a href= "https://www.facebook.com/ntuoss/?ref=br_rs" target="_blank">
         <button type = "button" class = "btn">
-                   Facebook           
+            <fa-icon [icon] = "fb"> </fa-icon>      
         </button>
         </a>
+        <div class="divider">
+            
+        </div>
+        
+        <a href= "https://twitter.com/ntuoss" target="_blank">
+        <button type = "button" class = "btn" margin = 2.5em>
+        <fa-icon [icon] = "twt" class = "tweet"></fa-icon>   
+        </button>
+        </a>
+        
+
     </div>
 
 </nav>
