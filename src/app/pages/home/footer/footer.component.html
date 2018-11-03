@@ -1,31 +1,18 @@
-
-<nav class=" navbar navbar-dark bg-dark mt-10 clearfix">
-
-    <div class="navbar-expand m-auto navbar-text">
-        Made with
-        <fa-icon [icon] = "heart" class = "hrt" ></fa-icon>
-        by NTUOSS
-        
-    </div>    
-    <div class="navbar-expand m-auto navbar-text ">
-        Follow Us On Social Media
-        <a href= "https://www.facebook.com/ntuoss/?ref=br_rs" target="_blank">
-        <button type = "button" class = "btn">
-            <fa-icon [icon] = "fb"> </fa-icon>      
-        </button>
+<div class="navbar navbar-dark bg-dark pt-4 pb-4">
+  <div class="container">
+    <div class="navbar-text m-auto">
+      Made with <fa-icon [icon]="['fas', 'heart']" style="color: red;"></fa-icon> by NTUOSS
+      <div class="block text-center pt-2">
+        <a href="https://www.facebook.com/ntuoss/?ref=br_rs" target="_blank" class="btn mr-1" role="button" aria-pressed="true">
+          <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
         </a>
-        <div class="divider">
-            
-        </div>
-        
-        <a href= "https://twitter.com/ntuoss" target="_blank">
-        <button type = "button" class = "btn" margin = 2.5em>
-        <fa-icon [icon] = "twt" class = "tweet"></fa-icon>   
-        </button>
+        <a href="https://twitter.com/ntuoss" target="_blank" class="btn mr-1" role="button" aria-pressed="true">
+          <fa-icon [icon]="['fab', 'twitter']"></fa-icon>   
         </a>
-        
-
+        <a href="https://www.instagram.com/ntuoss/" target="_blank" class="btn" role="button" aria-pressed="true">
+          <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+        </a>
+      </div>
     </div>
-
-</nav>
-
+  </div>  
+</div>
