@@ -1,0 +1,42 @@
+@import '../../../../assets/config.scss';
+
+// .featured-event {
+//     transform: translateY(2rem);
+//     height: 100vh;
+//     width: 100vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     img {
+//         box-shadow: 0 0 100px rgba($primary-color, 0.8);
+//         width: 80%;
+//         cursor: pointer;
+//     }
+//     .text {
+//         display: none;
+//     }
+// }
+.event-container {
+    display: grid;
+    padding: 10rem 5rem;
+    height: 100vh;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: auto;
+    grid-row-gap: 3rem;
+    justify-items: center;
+    
+}
+
+@include mediaLg {
+  .event-container {
+    grid-template-columns: repeat(2 ,1fr);
+  }
+}
+@include mediaMd {
+  .event-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 2rem;
+  }
+}
+

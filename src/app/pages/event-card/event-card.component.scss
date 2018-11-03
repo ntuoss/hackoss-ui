@@ -1,0 +1,59 @@
+@import '../../../assets/config.scss';
+
+.event {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    border: none;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 2px rgba($primary-color, 0.5);
+    transition: 1s;
+    &:hover {
+        box-shadow: 0 0 4px rgba($primary-color, 0.8);
+    }
+    img {
+        width:100%;
+    }
+}
+.content {
+    padding: 2rem;
+    .title {
+        font-weight: 600;
+        padding: 0.5rem 0;
+        color: $highlight-color;
+    }
+    .summary {
+        font-weight:200;
+        color: lighten($primary-color, 20);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $highlight-color;
+}
+button {
+    align-self: center;
+    border: 1px solid $highlight-color;
+    color: $highlight-color;
+    transition: 0.4s;
+    margin-bottom: 2rem;
+    &:hover {
+        border: 1px solid transparent;
+        background-color:$highlight-color;
+        color: $secondary-color;
+    }
+    &:active {
+        background-color: darken($highlight-color, 20);
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}

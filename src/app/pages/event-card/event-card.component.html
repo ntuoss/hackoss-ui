@@ -1,0 +1,21 @@
+<div class="card" (click)="showDetails(event)">
+  <img [src]="event.logo" alt="logo" class="logo">
+  <div class="content">
+    <h4 class="title"><a [href]="event.url" target="_blank">{{event.title}}</a></h4>
+    <h5 class="summary">
+      {{event.summary}}
+    </h5>
+  </div>
+  <div class="content">
+    <strong class="time">
+      {{getDateFromUTC(event.start)}}
+    </strong>
+    <div class="location" *ngFor="let line of event.location">
+      <small>
+        {{line}}
+      </small>
+    </div>
+  </div>
+  <button type="button" (click)="cardClick(event.url)" class="btn btn-outline-dark btn-lg">{{ isPastEvent() ?
+    'Register': 'Review'}}</button>
+</div>

@@ -9,18 +9,14 @@ import { EventsService, Event } from '../../../services/events/events.service';
 export class EventsComponent implements OnInit {
 
   events: Event[] = [];
-
-  constructor(private eventsService: EventsService) {}
+  featuredEvent: Event;
+  constructor(private eventsService: EventsService) { }
 
   ngOnInit() {
-  }
-
-  async getGoogleCalendarEvents() {
-    this.events = await this.eventsService.getGoogleCalendarEvents();
+    this.getEventbriteEvents();
   }
 
   async getEventbriteEvents() {
-    this.events = await this.eventsService.getEventbriteEvents();
+    this.events = await this.eventsService.getEventbriteEvents(200);
   }
-
 }
