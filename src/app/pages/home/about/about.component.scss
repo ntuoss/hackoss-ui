@@ -1,0 +1,34 @@
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  & > .container {
+    margin: auto;
+  }
+}
+
+p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.row {
+  
+  &:first-of-type {
+    border-bottom: 1px solid #BABABA;
+  }
+  
+  .col {
+    padding: 2rem;
+    
+    &:first-of-type {
+      border-right: 1px solid #BABABA;
+    }
+
+    img {
+      height: 5rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
