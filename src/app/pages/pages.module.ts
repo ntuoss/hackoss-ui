@@ -14,7 +14,8 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLocationArrow, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 const PAGES_COMPONENTS = [
   EventsComponent,
   DataComponent,
@@ -33,7 +34,8 @@ const FONTAWESOME_ICONS = [
   faLocationArrow,
   faHeart,
   faFacebookF,
-  faTwitter
+  faTwitter,
+  faInstagram
 ];
 
 library.add(...FONTAWESOME_ICONS);
