@@ -13,10 +13,10 @@
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba($primary-color, 0.5);
+    box-shadow: 0 0 2px rgba($primary-color, 0.5);
     transition: 1s;
     &:hover {
-        box-shadow: 0 0 30px rgba($primary-color, 0.8);
+        box-shadow: 0 0 4px rgba($primary-color, 0.8);
     }
     img {
         width:100%;
