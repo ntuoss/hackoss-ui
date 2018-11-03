@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+  heart = faHeart;
+  fb = faFacebookF;
+  twt = faTwitter;
+  constructor() {}
+  ngOnInit() {}
+ }
