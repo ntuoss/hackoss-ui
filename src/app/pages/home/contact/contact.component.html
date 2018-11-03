@@ -1,83 +1,52 @@
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <h1 align="center">
-                Contact <font color="#00BFFF">Us</font> <span class="blinking">_</span>
-            </h1>
-            <p align = "center">Being open source, being proactive and being welcome to every one.</p>
-            <p align = "center">With our slogan shown above, please feel free to contact us if you get any doubts.</p>
-        </div>
+<div class="container">
+  <div class="block text-center pb-5">
+    <h1>Contact Us</h1>
+    <p class="lead">Being open source, being proactive and being welcome to every one. Feel free to contact us if you get any doubts.</p>
+  </div>
+  <div class="d-flex">
+    <div class="block m-auto pr-5 text-center">
+      <div class="contact-detail-container">
+        <fa-icon icon="map-marked-alt"></fa-icon>
+        <p>Nanyang Technogical University North Spine Lecture Theatre 1</p>
+      </div>
+      <div class="contact-detail-container">
+        <fa-icon icon="mobile-alt"></fa-icon>
+        <p>+65 9872 2707</p>
+      </div>
+      <div class="contact-detail-container">
+        <fa-icon icon="envelope-open"></fa-icon>
+        <p>ntuoss@gmail.com</p>
+      </div>
     </div>
-
-    <div class="row">
-        <div class="col">
-            <div class="row-inner">
-                <div class="col text-center fa-4x">
-                    <fa-icon icon="map-marked-alt" style="color:#00BFFF"></fa-icon>
-                </div>
-            </div>
-            <div class="row-inner">
-                <div class="col text-center">
-                    <p>Nanyang Technogical University North Spine Lecture Theatre 1</p>
-                </div>
-            </div>
-            <div class="row-inner">
-                <div class="col text-center fa-4x">
-                    <fa-icon icon="mobile-alt" style="color:#00BFFF"></fa-icon>
-                </div>
-            </div>
-            <div class="row-inner">
-                <div class="col text-center">
-                    <p>+65 9872 2707</p>
-                </div>
-            </div>
-            <div class="row-inner">
-                <div class="col text-center fa-4x">
-                    <fa-icon icon="envelope-open" style="color:#00BFFF"></fa-icon>
-                </div>
-            </div>
-            <div class="row-inner">
-                <div class="col text-center">
-                    <p>ntuoss@gmail.com</p>
-                </div>
-            </div>
+    <div class="block w-75">
+      <form>
+        <div class="row">
+          <div class="form-group col">
+            <label for="nameInput">Name</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Justin">
+          </div>
+          <div class="form-group col">
+            <label for="emailInput">Email address</label>
+            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+          </div>
         </div>
-
-        <div class="col">
-            <form>
-                <div class="row">
-                    <div class="col">
-                        <label for="nameInput">Name</label>
-                        <input type="text" class="form-control" id="nameInput" placeholder="Justin">
-                    </div>
-                    <div class="col">
-                        <label for="emailInput">Email address</label>
-                        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="typeSelect"> Message type</label>
-                    <select class="form-control" id="typeSelect">
-                        <option>Technical Support</option>
-                        <option>Join as a member</option>
-                        <option>Business Collaboration</option>
-                        <option>Others</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="textarea">Message</label>
-                    <textarea class="form-control" id="textarea" rows="3" placeholder="Please leave a message here"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-outline-primary">Submit</button>
-                </div>
-            </form>
+        <div class="form-group">
+          <label for="typeSelect">Message type</label>
+          <select class="form-control" id="typeSelect">
+            <option>Technical Support</option>
+            <option>Join as a member</option>
+            <option>Business Collaboration</option>
+            <option>Others</option>
+          </select>
         </div>
+        <div class="form-group">
+          <label for="textarea">Message</label>
+          <textarea class="form-control" id="textarea" rows="3" placeholder="Please leave a message here"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-outline-primary float-right">Submit</button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
