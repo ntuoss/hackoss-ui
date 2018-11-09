@@ -14,7 +14,7 @@ import { NavigationComponent } from './home/navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLocationArrow, faHeart, faMapMarkedAlt, faMobileAlt, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
+import { faLocationArrow, faHeart, faMapMarkedAlt, faMobileAlt, faEnvelopeOpen, faCodeBranch, faUsers, faRocket, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -40,7 +40,11 @@ const FONTAWESOME_ICONS = [
   faHeart,
   faFacebookF,
   faTwitter,
-  faInstagram
+  faInstagram,
+  faCodeBranch,
+  faUsers,
+  faRocket,
+  faHandshake
 ];
 
 library.add(...FONTAWESOME_ICONS);
