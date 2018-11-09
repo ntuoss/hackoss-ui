@@ -1,5 +1,10 @@
-<div class="event-container">
-  <div class="event" *ngFor="let event of events.slice(0,3)">
-    <app-event-card [event]="event"></app-event-card>
+<div class="container container-expanded">
+  <div class="container-fluid text-center mb-5">
+    <h2 class="mb-4">Events</h2>
+  </div>
+  <div class="events-container">
+    <div class="event" *ngFor="let event of events.slice(0,3)">
+      <app-event-card [event]="event"></app-event-card>
+    </div>
   </div>
 </div>

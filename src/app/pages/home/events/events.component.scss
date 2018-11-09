@@ -1,5 +1,13 @@
 @import '../../../../assets/config.scss';
 
+:host {
+  display: block;
+
+  & > .container {
+    padding: 10rem 0;
+  }
+}
+
 // .featured-event {
 //     transform: translateY(2rem);
 //     height: 100vh;
@@ -16,24 +24,23 @@
 //         display: none;
 //     }
 // }
-.event-container {
-    display: grid;
-    padding: 10rem 5rem;
-    height: 100vh;
-    grid-template-columns: repeat(3 ,1fr);
-    grid-template-rows: auto;
-    grid-row-gap: 3rem;
-    justify-items: center;
-    
+
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  grid-template-rows: auto;
+  grid-row-gap: 2rem;
+  justify-items: center;
 }
 
 @include mediaLg {
-  .event-container {
+  .events-container {
     grid-template-columns: repeat(2 ,1fr);
   }
 }
+
 @include mediaMd {
-  .event-container {
+  .events-container {
     grid-template-columns: 1fr;
     align-items: center;
     padding: 2rem;
