@@ -13,10 +13,11 @@
     margin: 0 5%;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 1px 5px rgba($primary-color, 0.5);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
     transition: 1s;
+
     &:hover {
-        box-shadow: 0 1.5px 8px rgba($primary-color, 0.8);
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
         transform: scale(1.001);
     }
     img {
