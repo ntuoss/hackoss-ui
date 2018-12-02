@@ -1,13 +1,12 @@
 import * as functions from "firebase-functions";
 import { getDocumentFromPrismic } from "./prismic";
 import { Event } from "./model/event";
-import { postToEventbrite } from "./eventbrite";
+import { getDocumentFromEventbrite } from "./eventbrite";
 import { postToFacebook } from "./facebook";
 import { postToInstagram } from "./instagram";
 
 const publishEvent = (event: Event) => {
   postToFacebook(event);
-  postToEventbrite(event);
   postToInstagram(event);
 };
 
@@ -16,7 +15,7 @@ const publishEvent = (event: Event) => {
 export const prismic = functions.https.onRequest(async (req, res) => {
   const { type, apiUrl, masterRef } = req.body;
   // Investigate on what type will match
-  if (type == "api-update") {
+  if (type === "api-update") {
     const eventManifest: Event = await getDocumentFromPrismic(
       apiUrl,
       masterRef
@@ -26,4 +25,11 @@ export const prismic = functions.https.onRequest(async (req, res) => {
   } else {
     res.json({ message: "Skip Automation" });
   }
+});
+
+// We shall use eventbrite instead as our primary endpoint
+export const eventbrite = functions.https.onRequest(async (req, res) => {
+  const { config, api_url } = req.body;
+  if (config.action === "event.created")
+    await getDocumentFromEventbrite(api_url);
 });
