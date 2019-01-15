@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import * as firebase from 'firebase';
 import { environment } from '../../../environments/environment';
-import '@firebase/database';
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class FirebaseService {
 
-  dataRef: firebase.database.Reference;
+  data: firebase.database.Database;
+  storage: firebase.storage.Storage;
 
   constructor() {
-    this.initFirebase();
+    this.init();
   }
 
-  initFirebase() {
+  init() {
     const config = {
       apiKey: environment.firebaseApiKey,
       authDomain: `${environment.firebaseAuthDomain}.firebaseapp.com`,
@@ -24,12 +24,7 @@ export class DataService {
       messagingSenderId: environment.firebaseSenderId,
     };
     firebase.initializeApp(config);
-    this.dataRef = firebase.database().ref('/');
-  }
-
-  getData() {
-    this.dataRef.on('value', snapShot => {
-      console.log(snapShot.val());
-    });
+    this.data = firebase.database();
+    this.storage = firebase.storage();
   }
 }

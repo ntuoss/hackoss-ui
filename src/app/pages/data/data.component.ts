@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data/data.service';
+import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 
 @Component({
   selector: 'app-data',
@@ -8,13 +8,13 @@ import { DataService } from '../../services/data/data.service';
 })
 export class DataComponent implements OnInit {
 
-  constructor(private dataService: DataService) { }
+  constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit() {
   }
 
   getData() {
-    this.dataService.getData();
+    // this.firebaseService.data.ref('/');
   }
 
 }
