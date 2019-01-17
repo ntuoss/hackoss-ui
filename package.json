@@ -1,5 +1,5 @@
 {
-  "name": "hackoss",
+  "name": "hackoss-ui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,7 +19,6 @@
     "@angular/platform-browser": "^7.2.0",
     "@angular/platform-browser-dynamic": "^7.2.0",
     "@angular/router": "^7.2.0",
-    "@firebase/database": "^0.3.9",
     "@fortawesome/angular-fontawesome": "^0.3.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-brands-svg-icons": "^5.6.3",
@@ -29,7 +28,7 @@
     "@types/mapbox-gl": "^0.51.3",
     "bootstrap": "^4.2.1",
     "core-js": "^2.6.2",
-    "firebase": "^5.7.3",
+    "hackoss": "file:../hackoss/dist/hackoss/hackoss-0.0.1.tgz",
     "mapbox-gl": "^0.52.0",
     "rxjs": "^6.3.3",
     "zone.js": "^0.8.27"

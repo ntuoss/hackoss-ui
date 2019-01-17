@@ -7,6 +7,7 @@ import { PagesModule } from './pages/pages.module';
 import { ServicesModule } from './services/services.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HackossModule } from 'hackoss';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     PagesModule,
     ServicesModule,
+    HackossModule,
     NgbModule
   ],
   providers: [],

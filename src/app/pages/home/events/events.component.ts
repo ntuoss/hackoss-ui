@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventsService, Event } from '../../../services/events/events.service';
+import { EventsService, Event } from 'hackoss';
 
 @Component({
   selector: 'app-events',
@@ -17,6 +17,7 @@ export class EventsComponent implements OnInit {
   }
 
   async getEventbriteEvents() {
-    this.events = await this.eventsService.getEventbriteEvents(200);
+    this.events = await this.eventsService.getEvents();
+    console.log(this.events);
   }
 }
