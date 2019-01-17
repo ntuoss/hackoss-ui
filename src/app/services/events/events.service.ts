@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { FirebaseService } from '../firebase/firebase.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventsService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private firebaseService: FirebaseService) { }
 
   shorten(str, maxLen, separator = ' ') {
     if (str.length <= maxLen) return str;
@@ -41,6 +42,14 @@ export class EventsService {
           location: event.venue.address.localized_multi_line_address_display
         }))
       );
+  }
+
+  getEvents() {
+    // return this.firebaseService.data.ref('')
+  }
+
+  getFeaturedEvents() {
+
   }
 
   // getGoogleCalendarEvents(limit: number = 10): Promise<Event[]> {
