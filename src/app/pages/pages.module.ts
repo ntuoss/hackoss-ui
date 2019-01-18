@@ -14,8 +14,25 @@ import { NavigationComponent } from './home/navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLocationArrow, faHeart, faMapMarkedAlt, faMobileAlt, faEnvelopeOpen, faCodeBranch, faUsers, faRocket, faHandshake } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { MomentModule } from 'ngx-moment';
+
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons';
+
+import {
+  faLocationArrow,
+  faHeart,
+  faMapMarkedAlt,
+  faMobileAlt,
+  faEnvelopeOpen,
+  faCodeBranch,
+  faUsers,
+  faRocket,
+  faHandshake
+} from '@fortawesome/free-solid-svg-icons';
 
 
 const PAGES_COMPONENTS = [
@@ -56,7 +73,8 @@ library.add(...FONTAWESOME_ICONS);
   imports: [
     CommonModule,
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MomentModule
   ],
   exports: [
     ...PAGES_COMPONENTS

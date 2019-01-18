@@ -8,7 +8,8 @@
   </div>
   <div class="content">
     <strong class="time">
-      {{getDateFromUTC(event.startTime)}}
+      {{event.startTime | amDateFormat: 'LL'}}<br>
+      {{event.startTime | amDateFormat: 'h:mm A'}}<br>
     </strong>
     <small class="location">
       {{event.venue.address}}

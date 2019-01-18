@@ -28,8 +28,10 @@
     "@types/mapbox-gl": "^0.51.3",
     "bootstrap": "^4.2.1",
     "core-js": "^2.6.2",
-    "hackoss": "https://github.com/ntuoss/hackoss/releases/download/0.1.0/hackoss-0.0.1.tgz",
+    "hackoss": "https://github.com/ntuoss/hackoss/releases/download/0.1.2/hackoss-0.1.2.tgz",
     "mapbox-gl": "^0.52.0",
+    "moment": "^2.23.0",
+    "ngx-moment": "^3.3.0",
     "rxjs": "^6.3.3",
     "zone.js": "^0.8.27"
   },
