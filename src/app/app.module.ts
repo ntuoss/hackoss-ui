@@ -8,6 +8,7 @@ import { ServicesModule } from './services/services.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HackossModule } from 'hackoss';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { HackossModule } from 'hackoss';
     HttpClientModule,
     PagesModule,
     ServicesModule,
-    HackossModule,
+    HackossModule.forRoot(environment.firebase),
     NgbModule
   ],
   providers: [],
