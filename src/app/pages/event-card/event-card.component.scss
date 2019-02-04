@@ -24,6 +24,11 @@
         width:100%;
     }
 }
+.second-wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-content: center;
+}
 .content {
     padding: 2rem;
     .title {
