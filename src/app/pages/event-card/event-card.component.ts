@@ -9,26 +9,16 @@ import { Event } from 'hackoss';
 export class EventCardComponent implements OnInit {
 
   @Input() event: Event;
+  isPastEvent: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.isPastEvent = this.event.endTime.getTime() < Date.now();
   }
 
-  showDetails(event) {
-    console.log(event);
-  }
-
-  cardClick(url) {
-    window.open(url);
-  }
-
-  getDateFromUTC(time) {
-    return new Date(time).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-  }
-
-  isPastEvent(time) {
-    return (new Date(time).getTime() < Date.now());
+  openRegistrationPage() {
+    window.open(this.event.eventbrite.url);
   }
 }
 

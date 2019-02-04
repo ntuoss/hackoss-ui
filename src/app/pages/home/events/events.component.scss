@@ -8,23 +8,6 @@
   }
 }
 
-// .featured-event {
-//     transform: translateY(2rem);
-//     height: 100vh;
-//     width: 100vw;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     img {
-//         box-shadow: 0 0 100px rgba($primary-color, 0.8);
-//         width: 80%;
-//         cursor: pointer;
-//     }
-//     .text {
-//         display: none;
-//     }
-// }
-
 .events-container {
   display: grid;
   grid-template-columns: repeat(3 ,1fr);
