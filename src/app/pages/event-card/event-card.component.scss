@@ -1,61 +1,38 @@
-@import '../../../assets/config.scss';
-
-.event {
-    display: flex;
-    justify-content: center;
-}
 .card {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    border: none;
+
     height: 100%;
     margin: 0 5%;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
-    transition: 1s;
+    flex-direction: column;
+    transition: 0.5s;
 
-    &:hover {
-        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
-        transform: scale(1.001);
+    .card-img-top {
+        object-fit: cover;
+        height: 16rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
-    img {
-        width:100%;
-    }
-}
-.content {
-    padding: 2rem;
-    .title {
-        font-weight: 600;
-        padding: 0.5rem 0;
-        color: $highlight-color;
-    }
-    .summary {
-        font-weight:200;
-        color: lighten($primary-color, 20);
-    }
-}
 
-a {
-    text-decoration: none;
-    color: $highlight-color;
-}
-button {
-    align-self: center;
-    border: 1px solid $highlight-color;
-    color: $highlight-color;
-    transition: 0.4s;
-    margin-bottom: 2rem;
+    .card-title > a {
+        text-decoration: none;
+    }
+
+    .card-text {
+        font-weight: 200;
+    }
+
+    .card-body {
+        padding: 2rem;
+
+        &:first-of-type {
+            flex: 1;
+            font-size: 1rem;
+        }
+
+        &:last-of-type {
+            flex: 0;
+        }
+    }
+    
     &:hover {
-        border: 1px solid transparent;
-        background-color:$highlight-color;
-        color: $secondary-color;
-    }
-    &:active {
-        background-color: darken($highlight-color, 20);
-    }
-    &:focus {
-        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.3);
     }
 }

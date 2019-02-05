@@ -1,20 +1,23 @@
-<div class="card" (click)="showDetails(event)">
-  <img [src]="event.banner.imageUrl" alt="logo" class="logo">
-  <div class="content">
-    <h4 class="title"><a [href]="event.eventbriteUrl" target="_blank">{{event.title}}</a></h4>
-    <h5 class="summary">
-      {{event.description}}
-    </h5>
-  </div>
-  <div class="content">
-    <strong class="time">
-      {{event.startTime | amDateFormat: 'LL'}}<br>
-      {{event.startTime | amDateFormat: 'h:mm A'}}<br>
-    </strong>
-    <small class="location">
-      {{event.venue.address}}
-    </small>
-  </div>
-  <button type="button" (click)="cardClick(event.eventbriteUrl)" class="btn btn-outline-dark btn-lg">{{ isPastEvent() ?
-    'Register': 'Review'}}</button>
+<div class="card">
+	<img class="card-img-top" [src]="event.banner.imageUrl">
+	<div class="card-body">
+		<h4 class="card-title">
+			<a [href]="event.eventbrite.url" target="_blank">{{ event.title }}</a>
+		</h4>
+		<p class="card-text">
+			{{ event.description }}
+		</p>
+	</div>
+	<div class="card-body">
+		<h4 class="card-subtitle mb-2">
+			{{ event.startTime | amDateFormat: 'dddd, MMMM D YYYY' }}
+		</h4>
+		<p class="card-subtitle text-muted">
+			{{ event.venue.addressLine1 }}<br>
+			{{ event.venue.addressLine2 }}
+		</p>
+		<button class="btn btn-outline-primary btn-sm btn-block mt-5" (click)="openRegistrationPage()" [disabled]="isPastEvent">
+			Register
+		</button>
+	</div>
 </div>

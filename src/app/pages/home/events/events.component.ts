@@ -9,16 +9,14 @@ import { EventsService } from 'src/app/services/events/events.service';
 })
 export class EventsComponent implements OnInit {
 
-  events: Event[] = [];
-  featuredEvent: Event;
+  featuredEvents: Event[] = [];
   constructor(private eventsService: EventsService) { }
 
   ngOnInit() {
-    this.getEventbriteEvents();
+    this.fetchFeaturedEvents();
   }
 
-  async getEventbriteEvents() {
-    this.events = await this.eventsService.getEvents();
-    console.log(this.events);
+  async fetchFeaturedEvents() {
+    this.featuredEvents = await this.eventsService.getFeaturedEvents();
   }
 }
