@@ -7,7 +7,7 @@
 
     .card-img-top {
         object-fit: cover;
-        height: 16rem;
+        height: 14rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
 
@@ -25,6 +25,18 @@
         &:first-of-type {
             flex: 1;
             font-size: 1rem;
+            overflow: hidden;
+            position: relative;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 4rem;
+                width: 100%;
+                background: linear-gradient(transparent, white);
+            }
         }
 
         &:last-of-type {

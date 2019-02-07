@@ -1,27 +1,12 @@
-<nav
-	class="navbar navbar-expand-lg sticky-top justify-content-between"
-	[ngClass]="{ translucent: isAtTheTop, 'navbar-dark': isAtTheTop, 'navbar-light': !isAtTheTop }"
->
+<nav class="navbar navbar-expand-lg sticky-top justify-content-between"
+  [ngClass]="{ translucent: isAtTheTop, 'navbar-dark': isAtTheTop, 'navbar-light': !isAtTheTop }">
 	<div class="container container-expanded">
-		<a class="navbar-brand" routerLink="/home" fragment="landing">
-			<img
-				src="../../../../assets/logo/Logo_Light_Small.png"
-				width="90"
-				height="90"
-				alt=""
-				*ngIf="isAtTheTop"
-			/>
-			<img
-				src="../../../../assets/logo/Logo_Dark.png"
-				width="90"
-				height="90"
-				alt=""
-				*ngIf="!isAtTheTop"
-			/>
+		<a class="navbar-brand" (click)="scrollTo('landing')">
+			<img width="90" height="90" [src]="'../../../../assets/logo/' + (isAtTheTop ? 'Logo_Light_Small' : 'Logo_Dark') + '.png'" alt=""/>
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item active" routerLinkActive="active" *ngFor="let link of navigationLinks">
-				<a class="nav-link" (click)="scroll(link.fragment)">{{ link.text }}</a>
+				<a class="nav-link" (click)="link.path ? goTo(link.path, link.fragment) : scrollTo(link.fragment)">{{ link.text }}</a>
 			</li>
 		</ul>
 	</div>
