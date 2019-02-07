@@ -22,9 +22,22 @@ export class EventsService extends EventsRepository {
     }
 
     async getFeaturedEvents(count: number = 3): Promise<Event[]> {
-        const events = (await this.getEvents()).filter(event => event.status !== 'draft');
-        events.sort((a, b) => b.startTime.getTime() - a.startTime.getTime());
-        return events.length > count ? events.slice(0, count) : events;
+        const liveEvents = await this.getEvents([{
+            fieldPath: 'status',
+            opStr: '==',
+            value: 'live'
+        }], count);
+
+        let completedEvents: Event[] = [];
+        if (liveEvents.length < count) {
+            completedEvents = await this.getEvents([{
+                fieldPath: 'status',
+                opStr: '==',
+                value: 'completed'
+            }], count - liveEvents.length);
+        }
+
+        return liveEvents.concat(completedEvents);
     }
 
 }
