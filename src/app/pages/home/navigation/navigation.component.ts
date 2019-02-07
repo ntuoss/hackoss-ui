@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -9,48 +10,34 @@ export class NavigationComponent implements OnInit {
 
   isAtTheTop = true;
   readonly navigationLinks: NavigationLink[] = [
-    {
-      text: 'Home',
-      path: '/home',
-      fragment: 'landing'
-    },
-    {
-      text: 'About',
-      path: '/home',
-      fragment: 'about'
-    },
-    {
-      text: 'Events',
-      path: '/home',
-      fragment: 'events'
-    },
-    {
-      text: 'Location',
-      path: '/home',
-      fragment: 'location'
-    },
-    {
-      text: 'Contact',
-      path: '/home',
-      fragment: 'contact'
-    }
+    { text: 'Home', fragment: 'landing' },
+    { text: 'About', fragment: 'about' },
+    { text: 'Events', fragment: 'events' },
+    { text: 'Location', fragment: 'location' },
+    { text: 'Contact', fragment: 'contact' }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.isAtTheTop = (scrollOffset / window.innerHeight) < 0.2;
+    this.isAtTheTop = scrollOffset / window.innerHeight < 0.2;
   }
 
+  goTo(path: string, fragment: string) {
+    this.router.navigateByUrl(path, { fragment });
+  }
+
+  scrollTo(fragment: string) {
+    document.querySelector(`#${fragment}`).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 interface NavigationLink {
   text: string;
-  path: string;
+  path?: string;
   fragment?: string;
 }
