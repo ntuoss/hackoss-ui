@@ -14,4 +14,11 @@ export class LandingComponent implements OnInit {
     videoElement.muted = 'muted';
   }
 
+  SignUp(){
+    location.href = "https://docs.google.com/forms/d/e/1FAIpQLScogpWz7GTiHglajjeQWmRn5shaQUcYgwj9btmf0APOmiY0CA/viewform";
+  }
+
+  Apply(){
+    location.href = "https://docs.google.com/document/d/1RvR_HU7okK5EePfBbDGp_nCGNPPzxWLQJcLhgCLVcXk/edit";
+  }
 }
