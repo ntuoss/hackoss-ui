@@ -1,52 +1,79 @@
 <div class="container">
-  <div class="block text-center pb-5">
-    <h1>Contact Us</h1>
-    <p class="lead">Being open source, being proactive and being welcome to every one. Feel free to contact us if you get any doubts.</p>
-  </div>
-  <div class="d-flex">
-    <div class="block m-auto pr-5 text-center">
-      <div class="contact-detail-container">
-        <fa-icon icon="map-marked-alt"></fa-icon>
-        <p>Nanyang Technogical University North Spine Lecture Theatre 1</p>
-      </div>
-      <div class="contact-detail-container">
-        <fa-icon icon="mobile-alt"></fa-icon>
-        <p>+65 9872 2707</p>
-      </div>
-      <div class="contact-detail-container">
-        <fa-icon icon="envelope-open"></fa-icon>
-        <p>ntuoss@gmail.com</p>
-      </div>
-    </div>
-    <div class="block w-75">
-      <form>
-        <div class="row">
-          <div class="form-group col">
-            <label for="nameInput">Name</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="Justin">
-          </div>
-          <div class="form-group col">
-            <label for="emailInput">Email address</label>
-            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="typeSelect">Message type</label>
-          <select class="form-control" id="typeSelect">
-            <option>Technical Support</option>
-            <option>Join as a member</option>
-            <option>Business Collaboration</option>
-            <option>Others</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="textarea">Message</label>
-          <textarea class="form-control" id="textarea" rows="3" placeholder="Please leave a message here"></textarea>
-        </div>
-        <div class="form-group">
-          <button type="button" class="btn btn-outline-primary float-right">Submit</button>
-        </div>
-      </form>
-    </div>
-  </div>
+	<div class="block text-center pb-5">
+		<h1>Contact Us</h1>
+		<p class="lead">
+			Being open source, being proactive and being welcome to every one. Feel free to contact us if
+			you get any doubts.
+		</p>
+	</div>
+	<div class="d-flex">
+		<div class="block m-auto pr-5 text-center">
+			<div class="contact-detail-container">
+				<fa-icon icon="map-marked-alt"></fa-icon>
+				<p>Nanyang Technogical University North Spine Lecture Theatre 1</p>
+			</div>
+			<div class="contact-detail-container">
+				<fa-icon icon="mobile-alt"></fa-icon>
+				<p>+65 9872 2707</p>
+			</div>
+			<div class="contact-detail-container">
+				<fa-icon icon="envelope-open"></fa-icon>
+				<p>ntuoss@gmail.com</p>
+			</div>
+		</div>
+		<div class="block w-75">
+			<form #feedbackForm="ngForm" (ngSubmit)="sendFeedback(feedbackForm)">
+				<div class="row">
+					<div class="form-group col">
+						<label for="nameInput">Name</label>
+						<input
+							ngModel
+							name="name"
+							required
+							type="text"
+							class="form-control"
+							id="nameInput"
+							placeholder="Justin"
+						/>
+					</div>
+					<div class="form-group col">
+						<label for="emailInput">Email address</label>
+						<input
+							ngModel
+							name="email"
+							required
+							type="email"
+							class="form-control"
+							id="emailInput"
+							placeholder="name@example.com"
+						/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="typeSelect">Message type</label>
+					<select ngModel name="type" required class="form-control" id="typeSelect">
+						<option>Technical Support</option>
+						<option>Join as a member</option>
+						<option>Business Collaboration</option>
+						<option>Others</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="textarea">Message</label>
+					<textarea
+						ngModel
+						name="message"
+						required
+						class="form-control"
+						id="textarea"
+						rows="3"
+						placeholder="Please leave a message here"
+					></textarea>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Submit" class="btn btn-outline-primary float-right" />
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
