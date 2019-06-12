@@ -1,0 +1,18 @@
+@import 'src/assets/styles/mapbox-gl';
+
+@media (min-width: 768px){
+  .container {
+    &.container-expanded {
+      max-width: 90%;
+    }
+  }  
+}
+
+@media (min-width: 992px){
+  .container {
+    &.container-expanded {
+      max-width: 80%;
+    }
+  }
+}
+

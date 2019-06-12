@@ -1,0 +1,8 @@
+<div class="container container-expanded">
+  <div class="container-fluid text-center mb-5">
+    <h2>Events</h2>
+  </div>
+  <div class="events-container">
+    <app-event-card *ngFor="let event of featuredEvents" [event]="event"></app-event-card>
+  </div>
+</div>

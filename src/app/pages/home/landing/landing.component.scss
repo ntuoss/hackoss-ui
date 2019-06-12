@@ -1,0 +1,61 @@
+:host {
+  display: block;
+  height: 100vh;
+  background: black;
+}
+
+.background-container {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  video {
+    position: absolute;
+    top: 0;
+    transform: scale(1.1);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#1c1c1c, 0.7);
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+
+  .overlay-content {
+    flex: 1;
+    color: white;
+    user-select: none;
+
+    .headline {
+      font-size: 6rem;
+      line-height: 6rem;
+      font-weight: 300;
+
+      @keyframes blink {
+        from, to { color: transparent; }
+        50% { color: white; }
+      }
+
+      .blinking {
+        animation: 1s blink step-end infinite;
+      }
+    }
+
+    .name {
+      font-size: 2rem;
+      color: #bababa;
+      padding: 1rem 0 2rem 0;
+    }
+
+    .btn:first-of-type {
+      margin-right: 1rem;
+    }
+
+  }
+}

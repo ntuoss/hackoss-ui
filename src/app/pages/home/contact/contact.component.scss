@@ -1,0 +1,16 @@
+:host {
+  height: 70vh;
+  display: flex;
+
+  & > .container {
+    margin: auto;
+  }
+}
+
+.contact-detail-container {
+  fa-icon {
+    color: #00BFFF;
+    display: block;
+    font-size: 3rem;
+  }
+}

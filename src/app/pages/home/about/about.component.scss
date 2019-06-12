@@ -1,0 +1,43 @@
+@import '../../../../assets/config.scss';
+
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  
+  & > .container {
+    margin: auto;
+    // box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+  }
+}
+
+p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.row {
+  
+  &:first-of-type {
+    border-bottom: 1px solid #BABABA;
+  }
+  
+  .col {
+    padding: 2rem;
+    
+    &:first-of-type {
+      border-right: 1px solid #BABABA;
+    }
+
+    fa-icon {
+      font-size: 4rem;
+      color: $highlight-color;
+    }
+
+    img {
+      height: 5rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

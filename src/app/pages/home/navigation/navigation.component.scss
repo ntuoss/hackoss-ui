@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  user-select: none;
+}
+
+.navbar {
+  background: white;
+  transition: 0.2s ease;
+  
+  &:not(.translucent) {
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+  }
+
+  &.translucent {
+    background: transparent;
+  }
+  a {
+    cursor: pointer;
+  }
+}
