@@ -11,6 +11,7 @@ import { LocationComponent } from './home/location/location.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { EventsComponent } from './home/events/events.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
+import { MobileComponent } from './mobile/mobile.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -42,6 +43,7 @@ const PAGES_COMPONENTS = [
   ContactComponent,
   EventsComponent,
   NavigationComponent,
+  MobileComponent,
 ];
 
 const FONTAWESOME_ICONS = [
@@ -62,7 +64,7 @@ const FONTAWESOME_ICONS = [
 library.add(...FONTAWESOME_ICONS);
 
 @NgModule({
-  declarations: [...PAGES_COMPONENTS],
+  declarations: [...PAGES_COMPONENTS, MobileComponent],
   imports: [CommonModule, RouterModule, FontAwesomeModule, MomentModule, FormsModule],
   exports: [...PAGES_COMPONENTS],
 })

@@ -1,5 +1,12 @@
 @import 'src/assets/styles/mapbox-gl';
 
+
+@media (max-width: 1200px) {
+  body {
+    background: #000;
+  }
+}
+
 @media (min-width: 768px){
   .container {
     &.container-expanded {
@@ -16,3 +23,7 @@
   }
 }
 
+@font-face {
+  font-family: 'NEON';
+  src: url('./assets/fonts/Neoneon.otf');
+}
