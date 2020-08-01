@@ -3,16 +3,16 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hackoss": {
-      "root": "",
-      "sourceRoot": "src",
+    "hackoss-ui": {
       "projectType": "application",
-      "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "style": "scss"
         }
       },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -21,8 +21,17 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "allowedCommonJsDependencies": [
+              "@ntuoss/hackoss",
+              "@firebase/util",
+              "@firebase/component"
+            ],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
               "src/assets/normalize.scss",
@@ -44,35 +53,42 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hackoss:build"
+            "browserTarget": "hackoss-ui:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "hackoss:build:production"
+              "browserTarget": "hackoss-ui:build:production"
             }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "hackoss:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -82,15 +98,5 @@
       }
     }
   },
-  "defaultProject": "hackoss",
-  "schematics": {
-    "@schematics/angular": {
-      "component": {
-        "spec": false
-      },
-      "service": {
-        "spec": false
-      }
-    }
-  }
+  "defaultProject": "hackoss-ui"
 }

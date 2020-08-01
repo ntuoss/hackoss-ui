@@ -12,8 +12,7 @@ import { ContactComponent } from './home/contact/contact.component';
 import { EventsComponent } from './home/events/events.component';
 import { NavigationComponent } from './home/navigation/navigation.component';
 import { RouterModule } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { MomentModule } from 'ngx-moment';
 import { FormsModule } from '@angular/forms';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -59,11 +58,13 @@ const FONTAWESOME_ICONS = [
   faHandshake,
 ];
 
-library.add(...FONTAWESOME_ICONS);
-
 @NgModule({
   declarations: [...PAGES_COMPONENTS],
   imports: [CommonModule, RouterModule, FontAwesomeModule, MomentModule, FormsModule],
   exports: [...PAGES_COMPONENTS],
 })
-export class PagesModule {}
+export class PagesModule {
+  constructor(lib: FaIconLibrary) {
+    lib.addIcons(...FONTAWESOME_ICONS)
+  }
+}

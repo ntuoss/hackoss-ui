@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { FirebaseRepository } from 'hackoss';
+import { FirebaseRepository } from '@ntuoss/hackoss';
 import { environment } from 'src/environments/environment';
 import Feedback from 'src/app/model/Feedback';
+
 @Injectable({
   providedIn: 'root',
 })
