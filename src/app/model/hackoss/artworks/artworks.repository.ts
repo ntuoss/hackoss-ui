@@ -38,7 +38,7 @@ export class ArtworksRepository {
         validators.artworkExists = (artworkId: string) => new Promise(async (resolve) => {
             const doc = await this.artworks.doc(artworkId).get();
             if (doc.exists) {
-                resolve();
+                resolve('');
             } else {
                 resolve(`Artwork with ID ${artworkId} does not exist in Firebase`);
             }

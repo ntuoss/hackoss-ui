@@ -33,7 +33,7 @@ export class OrganisationsRepository {
         validators.organisationExists = (organisationId: string) => new Promise(async (resolve) => {
             const doc = await this.organisations.doc(organisationId).get();
             if (doc.exists) {
-                resolve();
+                resolve('');
             } else {
                 resolve(`Organisation with ID ${organisationId} does not exist in Firebase`);
             }

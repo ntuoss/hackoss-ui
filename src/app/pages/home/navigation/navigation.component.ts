@@ -28,7 +28,7 @@ export class NavigationComponent implements OnInit {
   }
 
   goTo(path: string, fragment: string) {
-    this.router.navigateByUrl(path, { fragment });
+    this.router.navigateByUrl(path, /* Removed unsupported properties by Angular migration: fragment. */ {});
   }
 
   scrollTo(fragment: string) {

@@ -33,7 +33,7 @@ export class PeopleRepository {
         validators.personExists = (personId: string) => new Promise(async (resolve) => {
             const doc = await this.people.doc(personId).get();
             if (doc.exists) {
-                resolve();
+                resolve('');
             } else {
                 resolve(`Person with ID ${personId} does not exist in Firebase`);
             }

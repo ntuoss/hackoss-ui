@@ -74,7 +74,7 @@ export class EventsRepository {
         validators.tgifUnique = (tgif: number) => new Promise(async (resolve) => {
             const doc = await this.events.where('tgif', '==', tgif).get();
             if (doc.docs.length === 0) {
-                resolve();
+                resolve('');
             } else {
                 resolve(`Event with TGIFHacks # ${tgif} already exists in Firebase`);
             }

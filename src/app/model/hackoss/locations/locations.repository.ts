@@ -34,7 +34,7 @@ export class LocationsRepository {
         validators.locationExists = (locationId: string) => new Promise(async (resolve) => {
             const doc = await this.locations.doc(locationId).get();
             if (doc.exists) {
-                resolve();
+                resolve('');
             } else {
                 resolve(`Location with ID ${locationId} does not exist in Firebase`);
             }
