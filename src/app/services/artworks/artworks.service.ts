@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ArtworksRepository } from '@ntuoss/hackoss';
+import { ArtworksRepository } from 'src/app/model/hackoss';
 import { FirebaseService } from '../firebase/firebase.service';
 import { PeopleService } from '../people/people.service';
 

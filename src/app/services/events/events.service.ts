@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EventsRepository, Event } from '@ntuoss/hackoss';
+import { EventsRepository, Event } from 'src/app/model/hackoss';
 import { FirebaseService } from '../firebase/firebase.service';
 import { PeopleService } from '../people/people.service';
 import { LocationsService } from '../locations/locations.service';

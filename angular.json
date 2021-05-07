@@ -24,7 +24,6 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "allowedCommonJsDependencies": [
-              "@ntuoss/hackoss",
               "@firebase/util",
               "@firebase/component"
             ],

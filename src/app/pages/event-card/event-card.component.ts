@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Event } from '@ntuoss/hackoss';
+import { Event } from 'src/app/model/hackoss';
 
 @Component({
   selector: 'app-event-card',

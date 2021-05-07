@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FirebaseRepository } from '@ntuoss/hackoss';
+import { FirebaseRepository } from 'src/app/model/hackoss';
 import { environment } from 'src/environments/environment';
 import Feedback from 'src/app/model/Feedback';
 
